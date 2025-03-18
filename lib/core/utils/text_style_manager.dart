@@ -33,4 +33,24 @@ abstract class TextStyleManager {
         fontSize: size,
         color: color,
       );
+  static TextStyle extraBold(
+          {String? fontfamily,
+          required double size,
+          Color color = ColorManager.black1Color}) =>
+      TextStyle(
+        fontWeight: FontWeightManager.extraBold,
+        fontFamily: fontfamily,
+        fontSize: size,
+        color: color,
+      );
+  static TextStyle bold(
+          {String? fontfamily,
+          required double size,
+          Color color = ColorManager.black1Color}) =>
+      TextStyle(
+        fontWeight: FontWeightManager.bold,
+        fontFamily: fontfamily,
+        fontSize: size,
+        color: color,
+      );
 }

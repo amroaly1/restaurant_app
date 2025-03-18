@@ -13,5 +13,11 @@ class ARLanguage {
     LanguageGlobaleVar.onboardingtitle3: "توصيل سريع",
     LanguageGlobaleVar.onboardingdesc3:
         "توصيل سريع كالبرق، مباشرة إلى باب منزلك!\n طازج، ساخن، ودائما في الوقت المحدد.",
+    LanguageGlobaleVar.welcomeDesc:
+        "هل تشتهي شيئًا لذيذًا؟ اطلب بسهولة!\nتوصيل سريع، دفعات ميسرة، وخيارات طعام لا حصر لها بانتظارك!",
+    LanguageGlobaleVar.login: "تسجيل الدخول",
+    LanguageGlobaleVar.signUp: "انشاء حساب",
+    LanguageGlobaleVar.loginTitle: "مرحبا!",
+    LanguageGlobaleVar.signUpTitle: "حساب جديد",
   };
 }

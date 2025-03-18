@@ -13,5 +13,11 @@ class ENLanguage {
     LanguageGlobaleVar.onboardingtitle3: "Fast Delivery",
     LanguageGlobaleVar.onboardingdesc3:
         "Lightning-fast delivery, right to your doorstep!\nFresh, hot, and always on time.",
+    LanguageGlobaleVar.welcomeDesc:
+        "Craving something delicious? Order with ease!\nFast delivery, easy payments, and endless food choices await you!",
+    LanguageGlobaleVar.login: "Log In",
+    LanguageGlobaleVar.signUp: "Sign Up",
+    LanguageGlobaleVar.loginTitle: "Hello!",
+    LanguageGlobaleVar.signUpTitle: "New Account",
   };
 }

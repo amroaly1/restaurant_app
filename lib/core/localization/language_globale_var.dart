@@ -10,4 +10,11 @@ class LanguageGlobaleVar {
   static const String onboardingtitle3 = "Fast Delivery";
   static const String onboardingdesc3 =
       "Lightning-fast delivery, right to your doorstep!\nFresh, hot, and always on time.";
+  static const String welcomeDesc =
+      "Craving something delicious? Order with ease!\nFast delivery, easy payments, and endless food choices await you!";
+
+  static const String login = "Log In";
+  static const String signUp = "Sign Up";
+  static const String loginTitle = "Hello!";
+  static const String signUpTitle = "New Account";
 }
