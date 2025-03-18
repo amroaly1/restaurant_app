@@ -17,4 +17,6 @@ class LanguageGlobaleVar {
   static const String signUp = "Sign Up";
   static const String loginTitle = "Hello!";
   static const String signUpTitle = "New Account";
+  static const String welcome = "Welcome";
+  static const String email = "Email";
 }

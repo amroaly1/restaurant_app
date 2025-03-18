@@ -6,6 +6,7 @@ import 'package:ecommerce_app/core/utils/color_manager.dart';
 import 'package:ecommerce_app/core/utils/height_and_width_manager.dart';
 import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
+import 'package:ecommerce_app/features/auth/signup/presentation/widget/sigin_up_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -39,6 +40,7 @@ class SiginUpView extends StatelessWidget {
           ),
         ),
       ),
+      body: SiginUpBody(),
     );
   }
 }

@@ -19,5 +19,7 @@ class ENLanguage {
     LanguageGlobaleVar.signUp: "Sign Up",
     LanguageGlobaleVar.loginTitle: "Hello!",
     LanguageGlobaleVar.signUpTitle: "New Account",
+    LanguageGlobaleVar.welcome: "Welcome",
+    LanguageGlobaleVar.email: "Email",
   };
 }

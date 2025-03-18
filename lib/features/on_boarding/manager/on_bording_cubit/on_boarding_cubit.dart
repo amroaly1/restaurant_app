@@ -2,12 +2,10 @@ import 'dart:developer';
 
 import 'package:ecommerce_app/core/helper/arrow_direction.dart';
 import 'package:ecommerce_app/core/route/route_manager.dart';
-import 'package:ecommerce_app/core/utils/asset_icon_manager.dart';
 import 'package:ecommerce_app/features/on_boarding/manager/on_bording_cubit/on_bording_state.dart';
 import 'package:ecommerce_app/features/welcome/presentation/welcome_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get/get.dart';
 
 class OnBoardingCubit extends Cubit<OnBordingState> {
   OnBoardingCubit() : super(OnBoardingInit());

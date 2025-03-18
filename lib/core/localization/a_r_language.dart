@@ -19,5 +19,7 @@ class ARLanguage {
     LanguageGlobaleVar.signUp: "انشاء حساب",
     LanguageGlobaleVar.loginTitle: "مرحبا!",
     LanguageGlobaleVar.signUpTitle: "حساب جديد",
+    LanguageGlobaleVar.welcome: "مرحبا",
+    LanguageGlobaleVar.email: "ايميل",
   };
 }
