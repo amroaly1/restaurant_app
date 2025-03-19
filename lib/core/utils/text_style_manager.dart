@@ -57,17 +57,20 @@ abstract class TextStyleManager {
   static TextStyle thin(
           {String? fontfamily,
           required double size,
-          Color color = ColorManager.black1Color}) =>
+          Color color = ColorManager.black1Color,
+          TextOverflow? overFow}) =>
       TextStyle(
         fontWeight: FontWeightManager.thin,
         fontFamily: fontfamily,
         fontSize: size,
         color: color,
+        overflow: overFow,
       );
-  static TextStyle regular(
-          {String? fontfamily,
-          required double size,
-          Color color = ColorManager.black1Color}) =>
+  static TextStyle regular({
+    String? fontfamily,
+    required double size,
+    Color color = ColorManager.black1Color,
+  }) =>
       TextStyle(
         fontWeight: FontWeightManager.regular,
         fontFamily: fontfamily,

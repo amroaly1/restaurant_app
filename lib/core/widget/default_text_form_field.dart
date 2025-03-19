@@ -14,11 +14,13 @@ class DefaultTextFormField extends StatelessWidget {
     this.controller,
     this.validator,
     this.isAuth = false,
+    this.keyboardType,
   });
   final String hintText;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
   final bool isAuth;
+  final TextInputType? keyboardType;
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +36,7 @@ class DefaultTextFormField extends StatelessWidget {
             ),
             obscureText: TextFormFieldCubit.get(context).obscure,
             obscuringCharacter: "*",
+            keyboardType: keyboardType,
             decoration: InputDecoration(
               contentPadding: PaddingManager.textFormFieldPadding,
               filled: true,
@@ -51,6 +54,12 @@ class DefaultTextFormField extends StatelessWidget {
               hintText: hintText,
               hintStyle: TextStyleManager.thin(
                 size: TextSizeManager.s17,
+              ),
+              errorMaxLines: 3,
+              errorStyle: TextStyleManager.thin(
+                size: TextSizeManager.s14,
+                color: ColorManager.redColor,
+                overFow: TextOverflow.visible,
               ),
               suffixIcon: TextFormFieldCubit.get(context).currentIcon(),
             ),

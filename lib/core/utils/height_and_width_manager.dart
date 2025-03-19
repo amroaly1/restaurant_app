@@ -7,6 +7,7 @@ abstract class HeightManager {
   static const double h7 = 7;
   static const double h8 = 8;
   static const double h10 = 10;
+  static const double h12 = 12;
   static const double h15 = 15;
   static const double h20 = 20;
   static const double h22 = 22;
@@ -17,6 +18,8 @@ abstract class HeightManager {
   static const double h45 = 45;
   static const double h50 = 50;
   static const double h52 = 52;
+  static const double h61 = 61;
+  static const double h65 = 65;
   static const double h163 = 163;
   static const double h689 = 689;
   static const double h338 = 338;

@@ -6,4 +6,7 @@ abstract class AssetIconManager {
   static const String arrowRight = "${_baseUrl}arrow_right.svg";
   static const String arrowLeft = "${_baseUrl}arrow_left.svg";
   static const String logo = "${_baseUrl}logo.svg";
+  static const String menuIcon = "${_baseUrl}menu_icon.svg";
+  static const String homeIcon = "${_baseUrl}home_icon.svg";
+  static const String profileIcon = "${_baseUrl}profile_icon.svg";
 }

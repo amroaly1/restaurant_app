@@ -25,4 +25,23 @@ class LanguageGlobaleVar {
   static const String fullname = "Full name ";
   static const String enterFullnamehere = "Enter Full name here";
   static const String mobileNumber = "Mobile Number";
+  static const String pleaseenteryouremail = "Please Enter Your Email!";
+  static const String pleaseentervalidateemail = "Please Enter Validate Email!";
+  static const String pleaseenteryourpassword = "Please Enter Your Password!";
+  static const String pleaseentervalidatepassword =
+      "Please Enter Validate Password!";
+  static const String pleaseentervalidateconfirmpassword =
+      "Please Enter Password Match!";
+  static const String pleaseenteryourMobile =
+      "Please Enter Your Mobile  Number!";
+  static const String pleaseentervalidateMobile =
+      "Please Enter Validate Mobile  Number!";
+  static const String pleaseenteryourFullName = "Please Enter Your Full Name!";
+  static const String pleaseentervalidateFullName =
+      "Please Enter at least 6 character!";
+
+  static const String privacy1 = "By continuing, you agree to ";
+  static const String privacy2 = "Terms of Use ";
+  static const String privacy3 = "Privacy Policy.";
+  static const String and = "and ";
 }

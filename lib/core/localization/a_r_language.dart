@@ -27,5 +27,20 @@ class ARLanguage {
     LanguageGlobaleVar.enterFullnamehere: "ادخل الاسم كامل هنا",
     LanguageGlobaleVar.mobileNumber: "رقم الموبايل",
     LanguageGlobaleVar.confirmPassword: "تاكيد الباسورد",
+    LanguageGlobaleVar.pleaseenteryouremail: "رجاءا ادخال ايميلك!",
+    LanguageGlobaleVar.pleaseentervalidateemail: "رجاءا ادخال ايميل صحيح",
+    LanguageGlobaleVar.pleaseenteryourMobile: "رجاءا ادخال رقمك المحمول!",
+    LanguageGlobaleVar.pleaseentervalidateMobile: "رجاءا ادخال رقم تليفون صحيح",
+    LanguageGlobaleVar.pleaseenteryourpassword: "رجاءا ادخال باسورد!",
+    LanguageGlobaleVar.pleaseentervalidatepassword:
+        "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل وتتضمن حرفًا كبيرًا واحدًا على الأقل وحرفًا صغيرًا واحدًا ورقمًا واحدًا وحرفًا خاصًا واحدًا (@\$!%?&)",
+    LanguageGlobaleVar.pleaseenteryourFullName: "رجاءا ادخال اسمك كامل",
+    LanguageGlobaleVar.pleaseentervalidateFullName:
+        "علي الاقل اسم مكون من 6 حروف!",
+    LanguageGlobaleVar.pleaseentervalidateconfirmpassword: "ادخل باسور متشابه!",
+    LanguageGlobaleVar.privacy1: "من خلال الاستمرار فإنك توافق على ",
+    LanguageGlobaleVar.privacy2: "شروط الاستخدام ",
+    LanguageGlobaleVar.privacy3: "سياسة الخصوصية.",
+    LanguageGlobaleVar.and: "و ",
   };
 }

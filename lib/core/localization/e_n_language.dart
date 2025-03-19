@@ -27,5 +27,23 @@ class ENLanguage {
     LanguageGlobaleVar.enterFullnamehere: "Enter Full name here",
     LanguageGlobaleVar.mobileNumber: "Mobile Number",
     LanguageGlobaleVar.confirmPassword: "Confirm Password ",
+    LanguageGlobaleVar.pleaseenteryouremail: "Please Enter Your Email!",
+    LanguageGlobaleVar.pleaseentervalidateemail: "Please Enter Validate Email!",
+    LanguageGlobaleVar.pleaseenteryourMobile:
+        "Please Enter Your Mobile Number!",
+    LanguageGlobaleVar.pleaseentervalidateMobile:
+        "Please Enter Validate Mobile  Number!",
+    LanguageGlobaleVar.pleaseenteryourpassword: "Please Enter Your Password!",
+    LanguageGlobaleVar.pleaseentervalidatepassword:
+        "Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character (@\$!%?&)",
+    LanguageGlobaleVar.pleaseenteryourFullName: "Please Enter Your Full Name!",
+    LanguageGlobaleVar.pleaseentervalidateFullName:
+        "Please Enter at least 6 character!",
+    LanguageGlobaleVar.pleaseentervalidateconfirmpassword:
+        "Please Enter Password Match!",
+    LanguageGlobaleVar.privacy1: "By continuing, you agree to ",
+    LanguageGlobaleVar.privacy2: "Terms of Use ",
+    LanguageGlobaleVar.privacy3: "Privacy Policy.",
+    LanguageGlobaleVar.and: "and ",
   };
 }

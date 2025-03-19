@@ -1,4 +1,3 @@
-import 'package:ecommerce_app/core/localization/language_globale_var.dart';
 import 'package:ecommerce_app/core/utils/height_and_width_manager.dart';
 import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
@@ -12,12 +11,14 @@ class CustomTextFieldAndLabel extends StatelessWidget {
       required this.hintText,
       this.controller,
       this.validator,
-      this.isAuth = false});
+      this.isAuth = false,
+      this.keyboardType});
   final String labelText;
   final String hintText;
   final TextEditingController? controller;
   final String? Function(String?)? validator;
   final bool isAuth;
+  final TextInputType? keyboardType;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -33,6 +34,7 @@ class CustomTextFieldAndLabel extends StatelessWidget {
           controller: controller,
           validator: validator,
           isAuth: isAuth,
+          keyboardType: keyboardType,
         ),
       ],
     );

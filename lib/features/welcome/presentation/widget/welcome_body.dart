@@ -78,7 +78,8 @@ class WelcomeBody extends StatelessWidget {
               textColor: ColorManager.secondaryColor,
               onPressed: () {
                 // toDo navigate to login
-                RouteManager.navigateTo(LogInView());
+                // RouteManager.navigateTo(LogInView());
+                RouteManager.navigateToAndNoOptionToBack(LogInView());
               },
             ),
             SizedBox(height: HeightManager.h4),
@@ -88,7 +89,8 @@ class WelcomeBody extends StatelessWidget {
               textColor: ColorManager.secondaryColor,
               onPressed: () {
                 // toDo navigate to sign up
-                RouteManager.navigateTo(SiginUpView());
+                // RouteManager.navigateTo(SiginUpView());
+                RouteManager.navigateToAndNoOptionToBack(SiginUpView());
               },
             ),
           ],
