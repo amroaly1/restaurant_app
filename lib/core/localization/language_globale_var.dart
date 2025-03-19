@@ -44,4 +44,7 @@ class LanguageGlobaleVar {
   static const String privacy2 = "Terms of Use ";
   static const String privacy3 = "Privacy Policy.";
   static const String and = "and ";
+  static const String search = "search";
+  static const String goodMorning = "Good Morning";
+  static const String riseandshine = "Rise and shine! It's breakfast time";
 }

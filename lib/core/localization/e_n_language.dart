@@ -45,5 +45,8 @@ class ENLanguage {
     LanguageGlobaleVar.privacy2: "Terms of Use ",
     LanguageGlobaleVar.privacy3: "Privacy Policy.",
     LanguageGlobaleVar.and: "and ",
+    LanguageGlobaleVar.search: "Search",
+    LanguageGlobaleVar.goodMorning: "Good Morning",
+    LanguageGlobaleVar.riseandshine: "Rise and shine! It's breakfast time",
   };
 }

@@ -10,5 +10,6 @@ abstract class ColorManager {
   static const yellowColor = Color(0xffF3E9B5);
   static const blueColor = Colors.blue;
   static const greyColor = Colors.grey;
+  static const grey1Color = Color(0xff676767);
   static const redColor = Colors.red;
 }

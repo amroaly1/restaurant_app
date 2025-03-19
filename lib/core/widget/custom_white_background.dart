@@ -4,8 +4,8 @@ import 'package:ecommerce_app/core/utils/raduis_manager.dart';
 import 'package:flutter/material.dart';
 
 class CustomWhiteBackground extends StatelessWidget {
-  const CustomWhiteBackground({super.key, required this.height, this.child});
-  final double height;
+  const CustomWhiteBackground({super.key, this.height, this.child});
+  final double? height;
   final Widget? child;
   @override
   Widget build(BuildContext context) {

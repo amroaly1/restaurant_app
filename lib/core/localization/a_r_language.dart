@@ -42,5 +42,8 @@ class ARLanguage {
     LanguageGlobaleVar.privacy2: "شروط الاستخدام ",
     LanguageGlobaleVar.privacy3: "سياسة الخصوصية.",
     LanguageGlobaleVar.and: "و ",
+    LanguageGlobaleVar.search: "بحث",
+    LanguageGlobaleVar.goodMorning: "صباح الخير",
+    LanguageGlobaleVar.riseandshine: "استيقظوا! حان وقت الإفطار",
   };
 }

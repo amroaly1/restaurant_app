@@ -9,4 +9,5 @@ abstract class AssetIconManager {
   static const String menuIcon = "${_baseUrl}menu_icon.svg";
   static const String homeIcon = "${_baseUrl}home_icon.svg";
   static const String profileIcon = "${_baseUrl}profile_icon.svg";
+  static const String shoopingIcon = "${_baseUrl}shooping_icon.svg";
 }

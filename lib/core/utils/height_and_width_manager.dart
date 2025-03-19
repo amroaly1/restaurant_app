@@ -9,8 +9,11 @@ abstract class HeightManager {
   static const double h10 = 10;
   static const double h12 = 12;
   static const double h15 = 15;
+  static const double h16 = 16;
+  static const double h17 = 17;
   static const double h20 = 20;
   static const double h22 = 22;
+  static const double h26 = 26;
   static const double h27 = 27;
   static const double h30 = 30;
   static const double h34 = 34;
@@ -21,6 +24,7 @@ abstract class HeightManager {
   static const double h61 = 61;
   static const double h65 = 65;
   static const double h163 = 163;
+  static const double h180 = 180;
   static const double h689 = 689;
   static const double h338 = 338;
 }
@@ -34,4 +38,5 @@ abstract class WidthManager {
 
   static const double w49 = 49;
   static const double w207 = 207;
+  static const double w282 = 282;
 }

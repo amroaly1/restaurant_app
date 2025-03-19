@@ -47,12 +47,14 @@ abstract class TextStyleManager {
   static TextStyle bold(
           {String? fontfamily,
           required double size,
-          Color color = ColorManager.black1Color}) =>
+          Color color = ColorManager.black1Color,
+          double? height}) =>
       TextStyle(
         fontWeight: FontWeightManager.bold,
         fontFamily: fontfamily,
         fontSize: size,
         color: color,
+        height: height,
       );
   static TextStyle thin(
           {String? fontfamily,
@@ -73,6 +75,17 @@ abstract class TextStyleManager {
   }) =>
       TextStyle(
         fontWeight: FontWeightManager.regular,
+        fontFamily: fontfamily,
+        fontSize: size,
+        color: color,
+      );
+  static TextStyle light({
+    String? fontfamily,
+    required double size,
+    Color color = ColorManager.black1Color,
+  }) =>
+      TextStyle(
+        fontWeight: FontWeightManager.light,
         fontFamily: fontfamily,
         fontSize: size,
         color: color,
