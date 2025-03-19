@@ -47,4 +47,6 @@ class LanguageGlobaleVar {
   static const String search = "search";
   static const String goodMorning = "Good Morning";
   static const String riseandshine = "Rise and shine! It's breakfast time";
+  static const String bestSeller = "Best Seller ";
+  static const String viewAll = "View All";
 }

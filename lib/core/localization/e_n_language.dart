@@ -48,5 +48,7 @@ class ENLanguage {
     LanguageGlobaleVar.search: "Search",
     LanguageGlobaleVar.goodMorning: "Good Morning",
     LanguageGlobaleVar.riseandshine: "Rise and shine! It's breakfast time",
+    LanguageGlobaleVar.bestSeller: "Best Seller ",
+    LanguageGlobaleVar.viewAll: "View All",
   };
 }

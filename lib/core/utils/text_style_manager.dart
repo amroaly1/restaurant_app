@@ -27,12 +27,14 @@ abstract class TextStyleManager {
   static TextStyle semiBoald(
           {String? fontfamily,
           required double size,
-          Color color = ColorManager.black1Color}) =>
+          Color color = ColorManager.black1Color,
+          double? height}) =>
       TextStyle(
         fontWeight: FontWeightManager.semiBold,
         fontFamily: fontfamily,
         fontSize: size,
         color: color,
+        height: height,
       );
   static TextStyle extraBold(
           {String? fontfamily,

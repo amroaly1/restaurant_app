@@ -45,5 +45,7 @@ class ARLanguage {
     LanguageGlobaleVar.search: "بحث",
     LanguageGlobaleVar.goodMorning: "صباح الخير",
     LanguageGlobaleVar.riseandshine: "استيقظوا! حان وقت الإفطار",
+    LanguageGlobaleVar.bestSeller: "الافضل مبيعا ",
+    LanguageGlobaleVar.viewAll: "مشاهدت الكل",
   };
 }
