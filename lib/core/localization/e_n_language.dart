@@ -21,5 +21,11 @@ class ENLanguage {
     LanguageGlobaleVar.signUpTitle: "New Account",
     LanguageGlobaleVar.welcome: "Welcome",
     LanguageGlobaleVar.email: "Email",
+    LanguageGlobaleVar.enterEmailHere: "Enter email here",
+    LanguageGlobaleVar.password: "Password",
+    LanguageGlobaleVar.fullname: "Full name",
+    LanguageGlobaleVar.enterFullnamehere: "Enter Full name here",
+    LanguageGlobaleVar.mobileNumber: "Mobile Number",
+    LanguageGlobaleVar.confirmPassword: "Confirm Password ",
   };
 }

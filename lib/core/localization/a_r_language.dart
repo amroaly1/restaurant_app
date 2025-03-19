@@ -21,5 +21,11 @@ class ARLanguage {
     LanguageGlobaleVar.signUpTitle: "حساب جديد",
     LanguageGlobaleVar.welcome: "مرحبا",
     LanguageGlobaleVar.email: "ايميل",
+    LanguageGlobaleVar.enterEmailHere: "ادخل الايميل هنا",
+    LanguageGlobaleVar.password: "الباسورد",
+    LanguageGlobaleVar.fullname: "الاسم كامل",
+    LanguageGlobaleVar.enterFullnamehere: "ادخل الاسم كامل هنا",
+    LanguageGlobaleVar.mobileNumber: "رقم الموبايل",
+    LanguageGlobaleVar.confirmPassword: "تاكيد الباسورد",
   };
 }

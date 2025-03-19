@@ -19,4 +19,10 @@ class LanguageGlobaleVar {
   static const String signUpTitle = "New Account";
   static const String welcome = "Welcome";
   static const String email = "Email";
+  static const String enterEmailHere = "Enter email here";
+  static const String password = "Password ";
+  static const String confirmPassword = "Confirm Password  ";
+  static const String fullname = "Full name ";
+  static const String enterFullnamehere = "Enter Full name here";
+  static const String mobileNumber = "Mobile Number";
 }
