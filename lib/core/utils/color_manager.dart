@@ -12,4 +12,5 @@ abstract class ColorManager {
   static const greyColor = Colors.grey;
   static const grey1Color = Color(0xff676767);
   static const redColor = Colors.red;
+  static const lightOrangeColor = Color(0xffFFDECF);
 }

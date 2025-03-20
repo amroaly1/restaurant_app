@@ -17,4 +17,5 @@ abstract class AssetIconManager {
   static const String vegan = "${_baseUrl}Vegan.svg";
   static const String drinks = "${_baseUrl}Drinks.svg";
   static const String desserts = "${_baseUrl}Desserts.svg";
+  static const String addToCard = "${_baseUrl}add_to_card.svg";
 }

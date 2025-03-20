@@ -53,5 +53,6 @@ class ARLanguage {
     LanguageGlobaleVar.vegan: "Vegan",
     LanguageGlobaleVar.dessert: "نباتي",
     LanguageGlobaleVar.drinks: "مشروبات",
+    LanguageGlobaleVar.addtoCart: "اضف الي المحفظة",
   };
 }

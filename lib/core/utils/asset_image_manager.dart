@@ -9,4 +9,5 @@ class AssetImageManager {
   static const String photoPizzaSlider = "${_baseUrl}photo_Pizza.png";
   static const String recommended = "${_baseUrl}recommended.png";
   static const String cardOfItem = "${_baseUrl}CardOfCategory.png";
+  static const String profileImage = "${_baseUrl}profile_image.png";
 }

@@ -55,4 +55,5 @@ class LanguageGlobaleVar {
   static const String vegan = "Vegan";
   static const String dessert = "Dessert";
   static const String drinks = "Drinks";
+  static const String addtoCart = "Add to Cart";
 }

@@ -12,5 +12,6 @@ abstract class TextSizeManager {
   static const double s28 = 28;
   static const double s30 = 30;
   static const double s32 = 32;
+  static const double s33 = 33;
   static const double s35 = 35;
 }

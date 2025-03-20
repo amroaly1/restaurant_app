@@ -56,5 +56,6 @@ class ENLanguage {
     LanguageGlobaleVar.vegan: "Vegan",
     LanguageGlobaleVar.dessert: "Dessert",
     LanguageGlobaleVar.drinks: "Drinks",
+    LanguageGlobaleVar.addtoCart: "Add to Cart",
   };
 }
