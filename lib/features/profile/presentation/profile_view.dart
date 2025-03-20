@@ -7,7 +7,7 @@ class ProfileView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Column(
-        children: [Text("Profile View")],
+        children: [],
       ),
     );
   }

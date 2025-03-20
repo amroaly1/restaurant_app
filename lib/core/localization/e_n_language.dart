@@ -50,5 +50,11 @@ class ENLanguage {
     LanguageGlobaleVar.riseandshine: "Rise and shine! It's breakfast time",
     LanguageGlobaleVar.bestSeller: "Best Seller ",
     LanguageGlobaleVar.viewAll: "View All",
+    LanguageGlobaleVar.recommend: "Recommend",
+    LanguageGlobaleVar.snacks: "Snacks",
+    LanguageGlobaleVar.meal: "Meal",
+    LanguageGlobaleVar.vegan: "Vegan",
+    LanguageGlobaleVar.dessert: "Dessert",
+    LanguageGlobaleVar.drinks: "Drinks",
   };
 }

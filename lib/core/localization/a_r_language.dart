@@ -47,5 +47,11 @@ class ARLanguage {
     LanguageGlobaleVar.riseandshine: "استيقظوا! حان وقت الإفطار",
     LanguageGlobaleVar.bestSeller: "الافضل مبيعا ",
     LanguageGlobaleVar.viewAll: "مشاهدت الكل",
+    LanguageGlobaleVar.recommend: "توصية",
+    LanguageGlobaleVar.snacks: "تسليه",
+    LanguageGlobaleVar.meal: "وجبات",
+    LanguageGlobaleVar.vegan: "Vegan",
+    LanguageGlobaleVar.dessert: "نباتي",
+    LanguageGlobaleVar.drinks: "مشروبات",
   };
 }

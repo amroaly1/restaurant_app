@@ -49,4 +49,10 @@ class LanguageGlobaleVar {
   static const String riseandshine = "Rise and shine! It's breakfast time";
   static const String bestSeller = "Best Seller ";
   static const String viewAll = "View All";
+  static const String recommend = "Recommend";
+  static const String snacks = "Snacks";
+  static const String meal = "Meal";
+  static const String vegan = "Vegan";
+  static const String dessert = "Dessert";
+  static const String drinks = "Drinks";
 }

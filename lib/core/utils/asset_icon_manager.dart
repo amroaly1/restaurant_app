@@ -10,4 +10,11 @@ abstract class AssetIconManager {
   static const String homeIcon = "${_baseUrl}home_icon.svg";
   static const String profileIcon = "${_baseUrl}profile_icon.svg";
   static const String shoopingIcon = "${_baseUrl}shooping_icon.svg";
+  static const String love = "${_baseUrl}love.svg";
+  static const String star = "${_baseUrl}star.svg";
+  static const String snacks = "${_baseUrl}Snacks.svg";
+  static const String meals = "${_baseUrl}Meals.svg";
+  static const String vegan = "${_baseUrl}Vegan.svg";
+  static const String drinks = "${_baseUrl}Drinks.svg";
+  static const String desserts = "${_baseUrl}Desserts.svg";
 }

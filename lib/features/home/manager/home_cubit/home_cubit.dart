@@ -1,7 +1,7 @@
 import 'package:ecommerce_app/core/utils/color_manager.dart';
 import 'package:ecommerce_app/features/home/manager/home_cubit/home_state.dart';
 import 'package:ecommerce_app/features/home/presentation/home_data_view.dart';
-import 'package:ecommerce_app/features/home/presentation/menu_view.dart';
+import 'package:ecommerce_app/features/menu/presentation/menu_view.dart';
 import 'package:ecommerce_app/features/profile/presentation/profile_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

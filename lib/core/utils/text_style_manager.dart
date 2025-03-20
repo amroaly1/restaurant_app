@@ -74,12 +74,14 @@ abstract class TextStyleManager {
     String? fontfamily,
     required double size,
     Color color = ColorManager.black1Color,
+    double? height,
   }) =>
       TextStyle(
         fontWeight: FontWeightManager.regular,
         fontFamily: fontfamily,
         fontSize: size,
         color: color,
+        height: height,
       );
   static TextStyle light({
     String? fontfamily,
