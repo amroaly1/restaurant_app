@@ -1,6 +1,3 @@
-import 'dart:async';
-import 'dart:developer';
-
 import 'package:ecommerce_app/core/helper/app_message.dart';
 import 'package:ecommerce_app/core/helper/app_validator.dart';
 import 'package:ecommerce_app/core/helper/arrow_direction.dart';
@@ -17,7 +14,6 @@ import 'package:ecommerce_app/core/widget/custom_text_field_and_label.dart';
 import 'package:ecommerce_app/core/widget/custom_white_background.dart';
 import 'package:ecommerce_app/core/widget/cutsom_image_picker.dart';
 import 'package:ecommerce_app/core/widget/default_button.dart';
-import 'package:ecommerce_app/features/home/presentation/home_view.dart';
 import 'package:ecommerce_app/features/my_profile/manager/my_profile_cubit.dart';
 import 'package:ecommerce_app/features/my_profile/manager/my_profile_state.dart';
 import 'package:flutter/material.dart';

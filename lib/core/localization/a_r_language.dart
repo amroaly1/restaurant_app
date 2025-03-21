@@ -63,5 +63,6 @@ class ARLanguage {
     LanguageGlobaleVar.error: "حدث خطأ",
     LanguageGlobaleVar.success: "عملية صحيحه",
     LanguageGlobaleVar.update: "تحديث",
+    LanguageGlobaleVar.confirmOrder: "تأكيد الطلب",
   };
 }

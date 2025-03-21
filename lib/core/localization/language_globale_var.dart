@@ -65,4 +65,6 @@ class LanguageGlobaleVar {
   static const String error = "error";
   static const String success = "success";
   static const String update = "Update";
+  static const String card = "card";
+  static const String confirmOrder = "confirmorder";
 }

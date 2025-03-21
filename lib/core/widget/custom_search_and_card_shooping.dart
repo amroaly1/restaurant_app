@@ -8,16 +8,19 @@ import 'package:ecommerce_app/core/utils/padding_manager.dart';
 import 'package:ecommerce_app/core/utils/raduis_manager.dart';
 import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
+import 'package:ecommerce_app/features/card/presentation/card_veiw.dart';
 import 'package:ecommerce_app/features/search/presentation/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class CustomSearchAndCardShooping extends StatelessWidget {
-  const CustomSearchAndCardShooping({super.key, this.onTap});
+  const CustomSearchAndCardShooping({
+    super.key,
+  });
   // final void Function(String)? onChanged;
   // final TextEditingController? controller;
-  final void Function()? onTap;
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -62,7 +65,9 @@ class CustomSearchAndCardShooping extends StatelessWidget {
               ),
             ),
             InkWell(
-              onTap: onTap,
+              onTap: () {
+                RouteManager.navigateTo(CardVeiw());
+              },
               child: Container(
                 padding: EdgeInsets.all(PaddingManager.p5),
                 decoration: BoxDecoration(

@@ -25,4 +25,5 @@ abstract class AssetIconManager {
   static const String logouticon = "${_baseUrl}logout_icon.svg";
   static const String camera = "${_baseUrl}camera.svg";
   static const String myProfile = "${_baseUrl}my_profile.svg";
+  static const String deleteicon = "${_baseUrl}delete_icon.svg";
 }
