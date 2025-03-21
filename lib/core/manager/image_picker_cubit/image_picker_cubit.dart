@@ -1,5 +1,7 @@
 import 'package:ecommerce_app/core/manager/image_picker_cubit/image_picker_state.dart';
 import 'package:ecommerce_app/core/route/route_manager.dart';
+import 'package:ecommerce_app/core/storage/cache_helper.dart';
+import 'package:ecommerce_app/core/storage/storage_key.dart';
 import 'package:ecommerce_app/core/utils/height_and_width_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,7 +16,11 @@ class ImagePickerCubit extends Cubit<ImagePickerState> {
   XFile? image;
 
   void getImageFromSharedPreference() {
-    // emit(ImagePickerGetFromStorage());
+    CacheHelper cacheHelper = CacheHelper();
+    String? image = cacheHelper.getDataString(key: StorageKey.imagepath);
+    if (image != null) {
+      emit(ImagePickerGetFromStorage(imageUrl: image));
+    }
   }
 
   void changeStateOfSelectImage() {

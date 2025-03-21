@@ -65,5 +65,6 @@ class ENLanguage {
     LanguageGlobaleVar.language: "Language",
     LanguageGlobaleVar.error: "Error",
     LanguageGlobaleVar.success: "Success",
+    LanguageGlobaleVar.update: "Update",
   };
 }

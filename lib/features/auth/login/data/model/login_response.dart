@@ -1,5 +1,5 @@
 import 'package:ecommerce_app/core/network/api_keys.dart';
-import 'package:ecommerce_app/features/auth/login/data/model/user_model.dart';
+import 'package:ecommerce_app/core/model/user_model.dart';
 
 class LoginResponse {
   final String accessToken;

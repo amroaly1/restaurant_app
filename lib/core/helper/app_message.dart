@@ -29,6 +29,7 @@ abstract class AppMessage {
     IconData? icon = Icons.check,
     Color? colorIcon = ColorManager.whiteColor,
   }) {
+    // log("Call Message..........................\n................................\n..................");
     Get.showSnackbar(
       GetSnackBar(
         titleText: Text(

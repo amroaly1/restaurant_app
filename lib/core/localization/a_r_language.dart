@@ -62,5 +62,6 @@ class ARLanguage {
     LanguageGlobaleVar.language: "اللغة",
     LanguageGlobaleVar.error: "حدث خطأ",
     LanguageGlobaleVar.success: "عملية صحيحه",
+    LanguageGlobaleVar.update: "تحديث",
   };
 }

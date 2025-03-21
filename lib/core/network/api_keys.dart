@@ -5,6 +5,7 @@ abstract class ApiKeys {
   static const String email = "email";
   static const String favoriteproducts = "favorite_products";
   static const String id = "id";
+  static const String image = "image";
   static const String imagepath = "image_path";
   static const String name = "name";
   static const String phone = "phone";

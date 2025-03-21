@@ -10,10 +10,11 @@ import 'package:ecommerce_app/core/utils/raduis_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:image_picker/image_picker.dart';
 
 class CutsomImagePicker extends StatelessWidget {
-  const CutsomImagePicker({super.key});
-
+  const CutsomImagePicker({super.key, required this.onSelected});
+  final void Function(XFile image) onSelected;
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -33,7 +34,11 @@ class CutsomImagePicker extends StatelessWidget {
                     color: ColorManager.primaryColor,
                   ),
                   child: BlocConsumer<ImagePickerCubit, ImagePickerState>(
-                    listener: (context, state) {},
+                    listener: (context, state) {
+                      if (state is ImagePickerSelectImage) {
+                        onSelected(state.image);
+                      }
+                    },
                     builder: (context, state) {
                       if (state is ImagePickerSelectImage) {
                         return Image.file(
@@ -41,7 +46,10 @@ class CutsomImagePicker extends StatelessWidget {
                           fit: BoxFit.cover,
                         );
                       } else if (state is ImagePickerGetFromStorage) {
-                        return SizedBox();
+                        return Image.network(
+                          state.imageUrl,
+                          fit: BoxFit.cover,
+                        );
                       }
                       return SvgPicture.asset(
                         AssetIconManager.myProfile,
