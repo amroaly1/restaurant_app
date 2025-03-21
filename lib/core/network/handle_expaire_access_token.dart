@@ -13,7 +13,7 @@ void handleExpairedAcessToken() async {
         endPoint: ApiEndPoint.refreshtoken, data: null, isRefrsh: true);
     cacheHelper.saveData(
         key: StorageKey.accesstoken, value: respose[ApiKeys.accesstoken]);
-  } on CustomDioException catch (e) {
+  } on CustomDioException {
     return;
   } catch (e) {
     return;

@@ -4,4 +4,5 @@ abstract class StorageKey {
   static const String email = "email";
   static const String imagepath = "image_path";
   static const String phone = "phone";
+  static const String name = "name";
 }

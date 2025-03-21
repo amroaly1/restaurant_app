@@ -2,7 +2,6 @@ import 'package:ecommerce_app/core/localization/languages.dart';
 import 'package:ecommerce_app/core/storage/cache_helper.dart';
 import 'package:ecommerce_app/core/utils/color_manager.dart';
 import 'package:ecommerce_app/core/utils/font_family_manager.dart';
-import 'package:ecommerce_app/features/home/presentation/home_view.dart';
 import 'package:ecommerce_app/features/on_boarding/presentation/on_bording_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

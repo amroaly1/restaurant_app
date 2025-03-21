@@ -1,6 +1,6 @@
 abstract class ApiKeys {
   static const String accesstoken = "access_token";
-  static const String refreshtoken = "refreshtoken";
+  static const String refreshtoken = "refresh_token";
   static const String status = "status";
   static const String email = "email";
   static const String favoriteproducts = "favorite_products";
@@ -11,4 +11,5 @@ abstract class ApiKeys {
   static const String authorization = "Authorization";
   static const String password = "password";
   static const String message = "message";
+  static const String user = "user";
 }

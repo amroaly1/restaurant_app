@@ -1,4 +1,6 @@
 import 'package:ecommerce_app/core/localization/language_globale_var.dart';
+import 'package:ecommerce_app/core/storage/cache_helper.dart';
+import 'package:ecommerce_app/core/storage/storage_key.dart';
 import 'package:ecommerce_app/core/utils/asset_icon_manager.dart';
 import 'package:ecommerce_app/features/my_favorites/presentation/my_favorites_view.dart';
 import 'package:ecommerce_app/features/my_orders/presentation/my_orders_view.dart';
@@ -6,6 +8,7 @@ import 'package:ecommerce_app/features/my_profile/presentation/my_profile_view.d
 import 'package:ecommerce_app/features/profile/data/model/setting_crad_model.dart';
 import 'package:ecommerce_app/features/settings/presentation/settings_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class ProfileRepo {
@@ -15,6 +18,29 @@ class ProfileRepo {
     MyFavoritesView(),
     SettingsView(),
   ];
+  static CacheHelper _cacheHelper = CacheHelper();
+  static String userName() {
+    return _cacheHelper.getData(key: StorageKey.name);
+  }
+
+  static String userEmail() {
+    return _cacheHelper.getData(key: StorageKey.email);
+  }
+
+  static Widget image() {
+    String? image = _cacheHelper.getData(key: StorageKey.imagepath);
+    if (image == null) {
+      return SvgPicture.asset(
+        AssetIconManager.myProfile,
+        fit: BoxFit.scaleDown,
+      );
+    } else {
+      return Image.network(
+        image,
+        fit: BoxFit.cover,
+      );
+    }
+  }
 
   static List<SettingCradModel> settingCardsData() {
     return List.generate(5, (index) {
