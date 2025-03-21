@@ -54,5 +54,11 @@ class ARLanguage {
     LanguageGlobaleVar.dessert: "نباتي",
     LanguageGlobaleVar.drinks: "مشروبات",
     LanguageGlobaleVar.addtoCart: "اضف الي المحفظة",
+    LanguageGlobaleVar.myProfile: "صفحتك",
+    LanguageGlobaleVar.myFavorites: "مفضلتي",
+    LanguageGlobaleVar.myOrders: "طلباتي",
+    LanguageGlobaleVar.settings: "اعدادات",
+    LanguageGlobaleVar.logOut: "تسجيل الخروج",
+    LanguageGlobaleVar.language: "اللغة",
   };
 }

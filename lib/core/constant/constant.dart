@@ -10,3 +10,6 @@ const List<String> botttomNavigationBarIcons = [
   AssetIconManager.menuIcon,
   AssetIconManager.profileIcon,
 ];
+
+const String ar = "AR";
+const String en = "EN";

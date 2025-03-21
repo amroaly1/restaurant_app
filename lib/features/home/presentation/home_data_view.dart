@@ -25,31 +25,32 @@ class HomeDataView extends StatelessWidget {
             padding: PaddingManager.paddingHorizontalBody,
             child: SizedBox(
               height: DeviceWidthHeight.perentageOfHeight(HeightManager.h180),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  CustomSearchAndCardShooping(
-                    onChanged: (p0) {},
-                  ),
-                  SizedBox(height: HeightManager.h16),
-                  Text(
-                    LanguageGlobaleVar.goodMorning.tr,
-                    style: TextStyleManager.bold(
-                      size: TextSizeManager.s30,
-                      color: ColorManager.white1Color,
-                      height: 0,
+              child: SafeArea(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CustomSearchAndCardShooping(),
+                    SizedBox(height: HeightManager.h16),
+                    Text(
+                      LanguageGlobaleVar.goodMorning.tr,
+                      style: TextStyleManager.bold(
+                        size: TextSizeManager.s30,
+                        color: ColorManager.white1Color,
+                        height: 1,
+                      ),
                     ),
-                  ),
-                  Text(
-                    LanguageGlobaleVar.riseandshine.tr,
-                    style: TextStyleManager.meduim(
-                      size: TextSizeManager.s13,
-                      color: ColorManager.secondaryColor,
+                    Text(
+                      LanguageGlobaleVar.riseandshine.tr,
+                      style: TextStyleManager.meduim(
+                        size: TextSizeManager.s13,
+                        color: ColorManager.secondaryColor,
+                        height: 1,
+                      ),
                     ),
-                  ),
-                  SizedBox(height: HeightManager.h17),
-                ],
+                    SizedBox(height: HeightManager.h17),
+                  ],
+                ),
               ),
             ),
           ),

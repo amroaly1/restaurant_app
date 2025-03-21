@@ -57,5 +57,11 @@ class ENLanguage {
     LanguageGlobaleVar.dessert: "Dessert",
     LanguageGlobaleVar.drinks: "Drinks",
     LanguageGlobaleVar.addtoCart: "Add to Cart",
+    LanguageGlobaleVar.myProfile: "My Profile",
+    LanguageGlobaleVar.myFavorites: "My Favorites",
+    LanguageGlobaleVar.myOrders: "My Orders",
+    LanguageGlobaleVar.settings: "Settings",
+    LanguageGlobaleVar.logOut: "Log Out",
+    LanguageGlobaleVar.language: "Language",
   };
 }

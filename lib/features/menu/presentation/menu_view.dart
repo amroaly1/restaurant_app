@@ -6,7 +6,7 @@ import 'package:ecommerce_app/core/widget/custom_search_and_card_shooping.dart';
 import 'package:ecommerce_app/core/widget/custom_white_background.dart';
 import 'package:ecommerce_app/features/menu/manager/menu_cubit/menu_cubit.dart';
 import 'package:ecommerce_app/features/menu/presentation/widget/custom_category_section.dart';
-import 'package:ecommerce_app/features/menu/presentation/widget/custom_list_of_category_item.dart';
+import 'package:ecommerce_app/core/widget/custom_list_of_items.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -50,7 +50,7 @@ class MenuView extends StatelessWidget {
                         color: ColorManager.primaryColor,
                       ),
                     ),
-                    CustomListOfCategoryItem()
+                    CustomListOfItems()
                   ],
                 ),
               ),

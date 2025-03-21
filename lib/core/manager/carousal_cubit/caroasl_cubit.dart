@@ -15,6 +15,11 @@ class CaroaslCubit extends Cubit<CarosalState> {
     _timer.cancel();
   }
 
+  void onIndexChage(int index) {
+    currentIndex = index;
+    emit(CarosalChangeIndex());
+  }
+
   void repeate() {
     _timer = Timer.periodic(
       Duration(seconds: 10),
@@ -29,7 +34,6 @@ class CaroaslCubit extends Cubit<CarosalState> {
           pageController.animateToPage(currentIndex,
               duration: Duration(milliseconds: 500), curve: Curves.linear);
         }
-        emit(CarosalChangeIndex());
       },
     );
   }

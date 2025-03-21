@@ -56,4 +56,10 @@ class LanguageGlobaleVar {
   static const String dessert = "Dessert";
   static const String drinks = "Drinks";
   static const String addtoCart = "Add to Cart";
+  static const String myProfile = "My Profile";
+  static const String myFavorites = "My Favorites";
+  static const String myOrders = "My Orders";
+  static const String settings = "Settings";
+  static const String logOut = "Log Out";
+  static const String language = "Language";
 }

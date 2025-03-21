@@ -39,6 +39,7 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
               SizedBox(
                 height: DeviceWidthHeight.perentageOfHeight(HeightManager.h135),
                 child: PageView.builder(
+                  onPageChanged: CaroaslCubit.get(context).onIndexChage,
                   controller: CaroaslCubit.get(context).pageController,
                   itemCount: 5,
                   itemBuilder: (context, index) {

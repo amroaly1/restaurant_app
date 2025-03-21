@@ -18,4 +18,9 @@ abstract class AssetIconManager {
   static const String drinks = "${_baseUrl}Drinks.svg";
   static const String desserts = "${_baseUrl}Desserts.svg";
   static const String addToCard = "${_baseUrl}add_to_card.svg";
+  static const String myprofileicon = "${_baseUrl}my_profile_icon.svg";
+  static const String myordersicon = "${_baseUrl}my_orders_icon.svg";
+  static const String myfavoritesicon = "${_baseUrl}my_favorites_icon.svg";
+  static const String settings = "${_baseUrl}settings.svg";
+  static const String logouticon = "${_baseUrl}logout_icon.svg";
 }

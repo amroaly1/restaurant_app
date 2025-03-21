@@ -5,8 +5,8 @@ import 'package:ecommerce_app/core/widget/custom_card_of_item.dart';
 import 'package:ecommerce_app/features/menu/presentation/menu_item_view.dart';
 import 'package:flutter/material.dart';
 
-class CustomListOfCategoryItem extends StatelessWidget {
-  const CustomListOfCategoryItem({
+class CustomListOfItems extends StatelessWidget {
+  const CustomListOfItems({
     super.key,
   });
 
