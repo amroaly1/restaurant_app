@@ -30,7 +30,8 @@ class ApiHelper {
       return response.data;
     } on DioException catch (e) {
       throw CustomDioException(
-          errMessage: ServerFailure.fromDioError(e).toString());
+        errMessage: ServerFailure.fromDioError(e).errorMessage,
+      );
     }
   }
 
@@ -49,7 +50,8 @@ class ApiHelper {
       return response.data;
     } on DioException catch (e) {
       throw CustomDioException(
-          errMessage: ServerFailure.fromDioError(e).toString());
+        errMessage: ServerFailure.fromDioError(e).errorMessage,
+      );
     }
   }
 
@@ -68,7 +70,8 @@ class ApiHelper {
       return response.data;
     } on DioException catch (e) {
       throw CustomDioException(
-          errMessage: ServerFailure.fromDioError(e).toString());
+        errMessage: ServerFailure.fromDioError(e).errorMessage,
+      );
     }
   }
 

@@ -13,3 +13,4 @@ const List<String> botttomNavigationBarIcons = [
 
 const String ar = "AR";
 const String en = "EN";
+const String errorMessage = "Oops ! There is error ): ";

@@ -63,5 +63,7 @@ class ENLanguage {
     LanguageGlobaleVar.settings: "Settings",
     LanguageGlobaleVar.logOut: "Log Out",
     LanguageGlobaleVar.language: "Language",
+    LanguageGlobaleVar.error: "Error",
+    LanguageGlobaleVar.success: "Success",
   };
 }

@@ -1,15 +1,19 @@
 import 'package:ecommerce_app/core/constant/constant.dart';
+import 'package:ecommerce_app/core/helper/app_message.dart';
 import 'package:ecommerce_app/core/helper/app_validator.dart';
 import 'package:ecommerce_app/core/helper/device_width_height.dart';
 import 'package:ecommerce_app/core/localization/language_globale_var.dart';
+import 'package:ecommerce_app/core/route/route_manager.dart';
 import 'package:ecommerce_app/core/utils/color_manager.dart';
 import 'package:ecommerce_app/core/utils/height_and_width_manager.dart';
 import 'package:ecommerce_app/core/utils/padding_manager.dart';
 import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
+import 'package:ecommerce_app/core/widget/custom_circle_progress_indicator.dart';
 import 'package:ecommerce_app/core/widget/custom_text_field_and_label.dart';
 import 'package:ecommerce_app/core/widget/custom_white_background.dart';
 import 'package:ecommerce_app/core/widget/default_button.dart';
+import 'package:ecommerce_app/features/auth/login/presentation/log_in_view.dart';
 import 'package:ecommerce_app/features/auth/signup/manager/sigin_up_cubit/sigin_up_cubit.dart';
 import 'package:ecommerce_app/features/auth/signup/manager/sigin_up_cubit/sigin_up_state.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +33,16 @@ class SiginUpBody extends StatelessWidget {
         padding: PaddingManager.paddingHorizontalBody,
         child: SingleChildScrollView(
           child: BlocConsumer<SiginUpCubit, SiginUpState>(
-            listener: (context, state) {},
+            listener: (context, state) {
+              if (state is SiginUpFailing) {
+                AppMessage.showMessage1(
+                    title: LanguageGlobaleVar.error.tr, body: state.errMessage);
+              } else if (state is SiginUpSuccess) {
+                AppMessage.showMessage2(
+                    title: LanguageGlobaleVar.success.tr, body: state.message);
+                RouteManager.navigateToAndNoOptionToBack(LogInView());
+              }
+            },
             builder: (context, state) {
               return Form(
                 key: SiginUpCubit.get(context).globalKey,
@@ -80,10 +93,12 @@ class SiginUpBody extends StatelessWidget {
                     ),
                     SizedBox(height: HeightManager.h15),
                     Center(
-                      child: DefaultButton(
-                        text: LanguageGlobaleVar.signUp.tr,
-                        onPressed: SiginUpCubit.get(context).onTap,
-                      ),
+                      child: state is SiginUpLoading
+                          ? CustomCircleProgressIndicator()
+                          : DefaultButton(
+                              text: LanguageGlobaleVar.signUp.tr,
+                              onPressed: SiginUpCubit.get(context).onTap,
+                            ),
                     ),
 
                     // ToDo Convert This String to Be Translate

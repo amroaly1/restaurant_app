@@ -60,5 +60,7 @@ class ARLanguage {
     LanguageGlobaleVar.settings: "اعدادات",
     LanguageGlobaleVar.logOut: "تسجيل الخروج",
     LanguageGlobaleVar.language: "اللغة",
+    LanguageGlobaleVar.error: "حدث خطأ",
+    LanguageGlobaleVar.success: "عملية صحيحه",
   };
 }

@@ -9,4 +9,6 @@ abstract class ApiKeys {
   static const String name = "name";
   static const String phone = "phone";
   static const String authorization = "Authorization";
+  static const String password = "password";
+  static const String message = "message";
 }

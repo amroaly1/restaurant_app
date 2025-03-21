@@ -62,4 +62,6 @@ class LanguageGlobaleVar {
   static const String settings = "Settings";
   static const String logOut = "Log Out";
   static const String language = "Language";
+  static const String error = "error";
+  static const String success = "success";
 }

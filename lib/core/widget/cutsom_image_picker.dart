@@ -10,7 +10,6 @@ import 'package:ecommerce_app/core/utils/raduis_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:image_picker/image_picker.dart';
 
 class CutsomImagePicker extends StatelessWidget {
   const CutsomImagePicker({super.key});
