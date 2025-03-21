@@ -7,7 +7,9 @@ import 'package:ecommerce_app/core/utils/height_and_width_manager.dart';
 import 'package:ecommerce_app/core/utils/padding_manager.dart';
 import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
+import 'package:ecommerce_app/core/widget/custom_text_field_and_label.dart';
 import 'package:ecommerce_app/core/widget/custom_white_background.dart';
+import 'package:ecommerce_app/core/widget/cutsom_image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -45,7 +47,17 @@ class MyProfileView extends StatelessWidget {
         child: Padding(
           padding: PaddingManager.paddingHorizontalBody,
           child: Column(
-            children: [],
+            spacing: HeightManager.h27,
+            children: [
+              SizedBox(),
+              CutsomImagePicker(),
+              CustomTextFieldAndLabel(
+                  labelText: LanguageGlobaleVar.fullname,
+                  hintText: LanguageGlobaleVar.fullname),
+              CustomTextFieldAndLabel(
+                  labelText: LanguageGlobaleVar.mobileNumber,
+                  hintText: LanguageGlobaleVar.mobileNumber),
+            ],
           ),
         ),
       ),
