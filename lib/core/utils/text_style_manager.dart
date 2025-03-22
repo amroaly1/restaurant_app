@@ -88,11 +88,13 @@ abstract class TextStyleManager {
     String? fontfamily,
     required double size,
     Color color = ColorManager.black1Color,
+    double? height,
   }) =>
       TextStyle(
         fontWeight: FontWeightManager.light,
         fontFamily: fontfamily,
         fontSize: size,
         color: color,
+        height: height,
       );
 }

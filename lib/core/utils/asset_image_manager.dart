@@ -11,4 +11,5 @@ class AssetImageManager {
   static const String cardOfItem = "${_baseUrl}CardOfCategory.png";
   static const String profileImage = "${_baseUrl}profile_image.png";
   static const String cardtest = "${_baseUrl}card_test.png";
+  static const String activeorder = "${_baseUrl}active_order.png";
 }

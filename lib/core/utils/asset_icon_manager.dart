@@ -26,4 +26,7 @@ abstract class AssetIconManager {
   static const String camera = "${_baseUrl}camera.svg";
   static const String myProfile = "${_baseUrl}my_profile.svg";
   static const String deleteicon = "${_baseUrl}delete_icon.svg";
+  static const String noDataInMyOrder = "${_baseUrl}no_data_in_my_order.svg";
+  static const String ordercancel = "${_baseUrl}order_cancel.svg";
+  static const String ordercomplete = "${_baseUrl}order_complete.svg";
 }

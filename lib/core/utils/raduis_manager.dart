@@ -1,4 +1,5 @@
 abstract class RaduisManager {
+  static const double r38 = 38.0;
   static const double r35 = 35.0;
   static const double r20 = 20.0;
   static const double r30 = 30.0;
