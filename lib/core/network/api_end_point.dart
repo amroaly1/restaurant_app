@@ -7,4 +7,5 @@ abstract class ApiEndPoint {
   static const String deleteuser = "delete_user";
   static const String orders = "orders";
   static const String cancelorder = "orders/cancel";
+  static const String sliders = "sliders";
 }

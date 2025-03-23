@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:ecommerce_app/core/manager/update_profile_cubit/update_profile_state.dart';
 import 'package:ecommerce_app/core/model/user_model.dart';
 import 'package:ecommerce_app/core/network/api_end_point.dart';

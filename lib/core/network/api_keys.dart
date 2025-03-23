@@ -32,4 +32,6 @@ abstract class ApiKeys {
   static const String canceled = "canceled";
   static const String completed = "completed";
   static const String orders = "orders";
+  static const String title = "title";
+  static const String sliders = "sliders";
 }

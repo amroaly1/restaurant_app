@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:ecommerce_app/core/helper/device_width_height.dart';
 import 'package:ecommerce_app/core/manager/carousal_cubit/caroasl_cubit.dart';
 import 'package:ecommerce_app/core/manager/carousal_cubit/carosal_state.dart';
@@ -8,6 +10,7 @@ import 'package:ecommerce_app/core/utils/raduis_manager.dart';
 import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
 import 'package:ecommerce_app/core/widget/custom_indicator.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -31,9 +34,23 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => CaroaslCubit()..repeate(),
+      create: (context) => CaroaslCubit()..getData(),
       child: BlocBuilder<CaroaslCubit, CarosalState>(
         builder: (context, state) {
+          if (state is CarosalGetDataLoading) {
+            return Center(child: CircularProgressIndicator());
+          } else if (state is CarosalGetDataFailure) {
+            return SizedBox(
+              height: DeviceWidthHeight.perentageOfHeight(HeightManager.h135),
+              child: Center(
+                child: Text(
+                  state.errMessage,
+                  style: TextStyleManager.bold(
+                      size: TextSizeManager.s18, color: ColorManager.redColor),
+                ),
+              ),
+            );
+          }
           return Column(
             children: [
               SizedBox(
@@ -41,7 +58,9 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
                 child: PageView.builder(
                   onPageChanged: CaroaslCubit.get(context).onIndexChage,
                   controller: CaroaslCubit.get(context).pageController,
-                  itemCount: 5,
+                  itemCount: CaroaslCubit.get(context).data.length <= 5
+                      ? CaroaslCubit.get(context).data.length
+                      : 5,
                   itemBuilder: (context, index) {
                     return Stack(
                       children: [
@@ -60,9 +79,11 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
                                   children: [
                                     Center(
                                       child: Text(
-                                        "Experience our delicious new dish",
+                                        CaroaslCubit.get(context)
+                                            .data[index]
+                                            .title,
                                         style: TextStyleManager.regular(
-                                          size: TextSizeManager.s16,
+                                          size: TextSizeManager.s18,
                                           color: ColorManager.whiteColor,
                                         ),
                                         textAlign: TextAlign.center,
@@ -70,11 +91,14 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
                                       ),
                                     ),
                                     Text(
-                                      "30% OFF",
+                                      CaroaslCubit.get(context)
+                                          .data[index]
+                                          .description,
                                       style: TextStyleManager.bold(
-                                        size: TextSizeManager.s32,
+                                        size: TextSizeManager.s20,
                                         color: ColorManager.whiteColor,
                                       ),
+                                      textAlign: TextAlign.center,
                                     )
                                   ],
                                 ),
@@ -92,8 +116,10 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
                                       ),
                                     ),
                                   ),
-                                  child: Image.asset(
-                                    AssetImageManager.photoPizzaSlider,
+                                  child: Image.network(
+                                    CaroaslCubit.get(context)
+                                        .data[index]
+                                        .imagePath,
                                     fit: BoxFit.fill,
                                     height: DeviceWidthHeight.perentageOfHeight(
                                         HeightManager.h135),
@@ -112,7 +138,9 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
                 height: HeightManager.h5,
               ),
               CustomIndicator(
-                  itemCount: 5,
+                  itemCount: CaroaslCubit.get(context).data.length <= 5
+                      ? CaroaslCubit.get(context).data.length
+                      : 5,
                   currentIndex: CaroaslCubit.get(context).currentIndex),
             ],
           );
