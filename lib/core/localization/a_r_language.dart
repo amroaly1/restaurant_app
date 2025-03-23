@@ -64,5 +64,6 @@ class ARLanguage {
     LanguageGlobaleVar.success: "عملية صحيحه",
     LanguageGlobaleVar.update: "تحديث",
     LanguageGlobaleVar.confirmOrder: "تأكيد الطلب",
+    LanguageGlobaleVar.orderDetails: "تفاصيل الطلب",
   };
 }

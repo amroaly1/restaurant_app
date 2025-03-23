@@ -51,7 +51,7 @@ abstract class AppMessage {
           icon,
           color: colorIcon,
         ),
-        duration: const Duration(seconds: 3),
+        duration: const Duration(seconds: 2),
       ),
     );
   }

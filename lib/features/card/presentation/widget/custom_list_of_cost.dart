@@ -7,8 +7,11 @@ import 'package:ecommerce_app/core/utils/text_style_manager.dart';
 import 'package:flutter/material.dart';
 
 class CustomListOfCost extends StatelessWidget {
-  const CustomListOfCost({super.key});
-
+  const CustomListOfCost({
+    super.key,
+    required this.price,
+  });
+  final List<double> price;
   @override
   Widget build(BuildContext context) {
     return SliverList.separated(
@@ -31,7 +34,7 @@ class CustomListOfCost extends StatelessWidget {
               ),
             ),
             Text(
-              "\$${listOfCost[index].price}",
+              "\$${price[index]}",
               style: TextStyleManager.meduim(
                 size: TextSizeManager.s20,
               ),

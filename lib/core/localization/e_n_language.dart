@@ -68,5 +68,6 @@ class ENLanguage {
     LanguageGlobaleVar.update: "Update",
     LanguageGlobaleVar.card: "Card",
     LanguageGlobaleVar.confirmOrder: "Confirm Order",
+    LanguageGlobaleVar.orderDetails: "Order Details",
   };
 }

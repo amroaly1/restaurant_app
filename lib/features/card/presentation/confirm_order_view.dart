@@ -135,7 +135,9 @@ class MyConfirmOrdersView extends StatelessWidget {
                   ],
                 ),
               ),
-              CustomListOfCost(),
+              CustomListOfCost(
+                price: [0, 0, 0, 0],
+              ),
               SliverToBoxAdapter(
                 child: Column(
                   children: [

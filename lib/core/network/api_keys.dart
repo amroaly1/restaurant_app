@@ -13,4 +13,23 @@ abstract class ApiKeys {
   static const String password = "password";
   static const String message = "message";
   static const String user = "user";
+  static const String latitude = "latitude";
+  static const String longitude = "longitude";
+  static const String description = "description";
+  static const String price = "price";
+  static const String quantity = "quantity";
+  static const String rating = "rating";
+  static const String totalprice = "total_price";
+  static const String driver = "driver";
+  static const String items = "items";
+  static const String orderchangedate = "order_change_date";
+  static const String orderdate = "order_date";
+  static const String shipping = "shipping";
+  static const String subtotal = "subtotal";
+  static const String total = "total";
+  static const String tax = "tax";
+  static const String active = "active";
+  static const String canceled = "canceled";
+  static const String completed = "completed";
+  static const String orders = "orders";
 }
