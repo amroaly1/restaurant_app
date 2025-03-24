@@ -7,12 +7,13 @@ import 'package:ecommerce_app/core/utils/height_and_width_manager.dart';
 import 'package:ecommerce_app/core/utils/raduis_manager.dart';
 import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
+import 'package:ecommerce_app/features/home/data/model/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CustomCardOfItem extends StatelessWidget {
-  const CustomCardOfItem({super.key});
-
+  const CustomCardOfItem({super.key, required this.product});
+  final ProductModel product;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -27,8 +28,8 @@ class CustomCardOfItem extends StatelessWidget {
               RaduisManager.r35,
             ),
           ),
-          child: Image.asset(
-            AssetImageManager.cardOfItem,
+          child: Image.network(
+            product.imagePath,
             fit: BoxFit.fill,
           ),
         ),
@@ -41,7 +42,7 @@ class CustomCardOfItem extends StatelessWidget {
               spacing: WidthManager.w12,
               children: [
                 Text(
-                  "Mexican appetizer",
+                  product.name,
                   style: TextStyleManager.semiBoald(
                     size: TextSizeManager.s18,
                     fontfamily: FontFamilyManager.poppins,
@@ -75,7 +76,7 @@ class CustomCardOfItem extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "5.0",
+                        product.rating.toString(),
                         style: TextStyleManager.regular(
                           size: TextSizeManager.s16,
                           height: 0,
@@ -98,7 +99,7 @@ class CustomCardOfItem extends StatelessWidget {
               ],
             ),
             Text(
-              "\$15.00",
+              "\$${product.price}",
               style: TextStyleManager.regular(
                 size: TextSizeManager.s18,
                 color: ColorManager.secondaryColor,
@@ -107,7 +108,7 @@ class CustomCardOfItem extends StatelessWidget {
           ],
         ),
         Text(
-          "Tortilla Chips With Toppins",
+          product.description,
           style: TextStyleManager.light(
             size: TextSizeManager.s12,
           ),

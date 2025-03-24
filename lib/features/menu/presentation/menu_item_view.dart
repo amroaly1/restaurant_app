@@ -9,6 +9,7 @@ import 'package:ecommerce_app/core/utils/raduis_manager.dart';
 import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
 import 'package:ecommerce_app/core/widget/custom_white_background.dart';
+import 'package:ecommerce_app/features/home/data/model/product_model.dart';
 import 'package:ecommerce_app/features/menu/manager/menu_item_cubit/menu_item_cubit.dart';
 import 'package:ecommerce_app/features/menu/manager/menu_item_cubit/menu_item_state.dart';
 import 'package:ecommerce_app/features/menu/presentation/widget/custom_icon_add_or_remove.dart';
@@ -19,8 +20,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class MenuItemView extends StatelessWidget {
-  const MenuItemView({super.key});
-
+  const MenuItemView({super.key, required this.product});
+  final ProductModel product;
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -29,7 +30,9 @@ class MenuItemView extends StatelessWidget {
         return Scaffold(
           body: Column(
             children: [
-              CustomItemDataViewAppBar(),
+              CustomItemDataViewAppBar(
+                product: product,
+              ),
               Expanded(
                 child: CustomWhiteBackground(
                   child: Padding(
@@ -48,8 +51,8 @@ class MenuItemView extends StatelessWidget {
                               RaduisManager.r30,
                             ),
                           ),
-                          child: Image.asset(
-                            AssetImageManager.cardOfItem,
+                          child: Image.network(
+                            product.imagePath,
                             fit: BoxFit.fill,
                           ),
                         ),
@@ -58,7 +61,7 @@ class MenuItemView extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              "\$50.00",
+                              "\$${product.price}",
                               style: TextStyleManager.bold(
                                 size: TextSizeManager.s24,
                                 color: ColorManager.secondaryColor,
@@ -107,7 +110,7 @@ class MenuItemView extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          "Tortilla Chips With Toppins",
+                          product.description,
                           style: TextStyleManager.regular(
                               size: TextSizeManager.s16),
                         ),

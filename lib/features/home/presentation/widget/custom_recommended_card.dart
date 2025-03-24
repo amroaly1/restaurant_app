@@ -1,19 +1,25 @@
+import 'package:ecommerce_app/core/helper/app_message.dart';
+import 'package:ecommerce_app/core/localization/language_globale_var.dart';
 import 'package:ecommerce_app/core/utils/asset_icon_manager.dart';
-import 'package:ecommerce_app/core/utils/asset_image_manager.dart';
 import 'package:ecommerce_app/core/utils/color_manager.dart';
 import 'package:ecommerce_app/core/utils/height_and_width_manager.dart';
 import 'package:ecommerce_app/core/utils/padding_manager.dart';
 import 'package:ecommerce_app/core/utils/raduis_manager.dart';
 import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
+import 'package:ecommerce_app/features/home/data/model/product_model.dart';
+import 'package:ecommerce_app/features/home/manager/top_rating_cubit/top_rate_cubit.dart';
+import 'package:ecommerce_app/features/home/manager/top_rating_cubit/top_rate_state.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CustomRecommendedCard extends StatelessWidget {
   const CustomRecommendedCard({
     super.key,
+    required this.productModel,
   });
-
+  final ProductModel productModel;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -22,8 +28,8 @@ class CustomRecommendedCard extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(RaduisManager.r12),
             image: DecorationImage(
-              image: AssetImage(
-                AssetImageManager.recommended,
+              image: NetworkImage(
+                productModel.imagePath,
               ),
               fit: BoxFit.fill,
             ),
@@ -52,7 +58,7 @@ class CustomRecommendedCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      "5.0",
+                      "${productModel.rating}",
                       style: TextStyleManager.regular(
                         size: TextSizeManager.s12,
                         height: 0,
@@ -90,11 +96,26 @@ class CustomRecommendedCard extends StatelessWidget {
                 //         Colors.white,
                 //         BlendMode.srcIn)),
                 child: InkWell(
-                  onTap: () {},
-                  child: Icon(
-                    Icons.favorite,
-                    size: HeightManager.h12,
-                    color: ColorManager.redColor,
+                  onTap: () {
+                    TopRateCubit.get(context).addToFavorite(productModel);
+                  },
+                  child: BlocConsumer<TopRateCubit, TopRateState>(
+                    listener: (context, state) {
+                      if (state is TopRateaddToFavoiriteFailing) {
+                        AppMessage.showMessage1(
+                            title: LanguageGlobaleVar.error,
+                            body: state.errMessage);
+                      }
+                    },
+                    builder: (context, state) {
+                      return Icon(
+                        productModel.isFavorite
+                            ? Icons.favorite
+                            : Icons.favorite_border,
+                        size: HeightManager.h12,
+                        color: ColorManager.redColor,
+                      );
+                    },
                   ),
                 ),
               ),
@@ -116,7 +137,7 @@ class CustomRecommendedCard extends StatelessWidget {
               ),
             ),
             child: Text(
-              "\$103.0",
+              "\$${productModel.price}",
               style: TextStyleManager.regular(
                 size: TextSizeManager.s12,
                 color: ColorManager.whiteColor,

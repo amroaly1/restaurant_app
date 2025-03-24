@@ -18,7 +18,7 @@ class ProfileRepo {
     MyFavoritesView(),
     SettingsView(),
   ];
-  static CacheHelper _cacheHelper = CacheHelper();
+  static final CacheHelper _cacheHelper = CacheHelper();
   static String userName() {
     return _cacheHelper.getData(key: StorageKey.name);
   }

@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:ecommerce_app/core/helper/device_width_height.dart';
 import 'package:ecommerce_app/core/manager/carousal_cubit/caroasl_cubit.dart';
 import 'package:ecommerce_app/core/manager/carousal_cubit/carosal_state.dart';
@@ -11,7 +9,6 @@ import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
 import 'package:ecommerce_app/core/widget/custom_indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 

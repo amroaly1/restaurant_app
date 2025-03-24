@@ -9,13 +9,14 @@ import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
 import 'package:ecommerce_app/core/widget/custom_list_of_items.dart';
 import 'package:ecommerce_app/core/widget/custom_white_background.dart';
+import 'package:ecommerce_app/features/home/data/model/product_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
 class BestSellerView extends StatelessWidget {
-  const BestSellerView({super.key});
-
+  const BestSellerView({super.key, required this.data});
+  final List<ProductModel> data;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,7 +51,9 @@ class BestSellerView extends StatelessWidget {
               SizedBox(
                 height: HeightManager.h37,
               ),
-              CustomListOfItems(),
+              CustomListOfItems(
+                data: data,
+              ),
             ],
           ),
         ),

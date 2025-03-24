@@ -8,4 +8,7 @@ abstract class ApiEndPoint {
   static const String orders = "orders";
   static const String cancelorder = "orders/cancel";
   static const String sliders = "sliders";
+  static const String bestsellerproducts = "best_seller_products";
+  static const String topratedproducts = "top_rated_products";
+  static const String addtofavorite = "add_to_favorite";
 }

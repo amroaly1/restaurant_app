@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:ecommerce_app/core/constant/constant.dart';
 import 'package:ecommerce_app/core/manager/carousal_cubit/carosal_state.dart';
 import 'package:ecommerce_app/features/home/data/model/slider_model.dart';
 import 'package:ecommerce_app/features/home/data/repo/home_repo.dart';
@@ -29,9 +28,9 @@ class CaroaslCubit extends Cubit<CarosalState> {
 
   PageController pageController = PageController();
   int currentIndex = 0;
-  static late Timer _timer;
+  static Timer? _timer;
   static void disposeTimer() {
-    _timer.cancel();
+    _timer?.cancel();
   }
 
   void onIndexChage(int index) {

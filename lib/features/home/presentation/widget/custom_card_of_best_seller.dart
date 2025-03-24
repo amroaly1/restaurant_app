@@ -1,17 +1,18 @@
 import 'package:ecommerce_app/core/helper/device_width_height.dart';
-import 'package:ecommerce_app/core/utils/asset_image_manager.dart';
 import 'package:ecommerce_app/core/utils/color_manager.dart';
 import 'package:ecommerce_app/core/utils/height_and_width_manager.dart';
 import 'package:ecommerce_app/core/utils/raduis_manager.dart';
 import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
+import 'package:ecommerce_app/features/home/data/model/product_model.dart';
 import 'package:flutter/material.dart';
 
 class CustomCardOfBestSeller extends StatelessWidget {
   const CustomCardOfBestSeller({
     super.key,
+    required this.product,
   });
-
+  final ProductModel product;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -26,8 +27,8 @@ class CustomCardOfBestSeller extends StatelessWidget {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(RaduisManager.r20),
             image: DecorationImage(
-              image: AssetImage(
-                AssetImageManager.bestsellerCard,
+              image: NetworkImage(
+                product.imagePath,
               ),
               fit: BoxFit.fill,
             ),
@@ -48,7 +49,7 @@ class CustomCardOfBestSeller extends StatelessWidget {
               ),
             ),
             child: Text(
-              "\$103.0",
+              "\$${product.price}",
               style: TextStyleManager.regular(
                 size: TextSizeManager.s12,
                 color: ColorManager.whiteColor,
@@ -62,8 +63,8 @@ class CustomCardOfBestSeller extends StatelessWidget {
 }
 
 class ListOfBestSeller extends StatelessWidget {
-  const ListOfBestSeller({super.key});
-
+  const ListOfBestSeller({super.key, required this.data});
+  final List<ProductModel> data;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -73,12 +74,14 @@ class ListOfBestSeller extends StatelessWidget {
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
-          return CustomCardOfBestSeller();
+          return CustomCardOfBestSeller(
+            product: data[index],
+          );
         },
         separatorBuilder: (context, index) => SizedBox(
           width: WidthManager.w12,
         ),
-        itemCount: 10,
+        itemCount: data.length,
       ),
     );
   }

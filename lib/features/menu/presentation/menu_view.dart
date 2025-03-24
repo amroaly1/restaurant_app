@@ -50,7 +50,10 @@ class MenuView extends StatelessWidget {
                         color: ColorManager.primaryColor,
                       ),
                     ),
-                    CustomListOfItems()
+                    // path data to this
+                    CustomListOfItems(
+                      data: [],
+                    ),
                   ],
                 ),
               ),

@@ -50,7 +50,9 @@ class MyFavoritesView extends StatelessWidget {
               SizedBox(
                 height: HeightManager.h37,
               ),
-              CustomListOfItems(),
+
+              // path data to it
+              // CustomListOfItems(),
             ],
           ),
         ),
