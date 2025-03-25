@@ -71,7 +71,7 @@ class ENLanguage {
     LanguageGlobaleVar.orderDetails: "Order Details",
     LanguageGlobaleVar.active: "Active",
     LanguageGlobaleVar.completed: "Completed",
-    LanguageGlobaleVar.cancelled: "ancelled",
+    LanguageGlobaleVar.cancelled: "Cancelled",
     LanguageGlobaleVar.searchAbout: "search about what you want",
   };
 }

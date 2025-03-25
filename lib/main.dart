@@ -8,6 +8,8 @@ import 'package:ecommerce_app/features/on_boarding/presentation/on_bording_view.
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'core/storage/storage_key.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await CacheHelper().init();
@@ -30,7 +32,9 @@ class MyApp extends StatelessWidget {
         fontFamily: FontFamilyManager.leagueSpartan,
         useMaterial3: true,
       ),
-      home: OnBordingView(),
+      home: CacheHelper().getDataString(key: StorageKey.accesstoken) != null
+          ? HomeView()
+          : OnBordingView(),
     );
   }
 }
