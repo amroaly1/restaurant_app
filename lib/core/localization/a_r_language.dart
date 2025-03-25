@@ -65,5 +65,8 @@ class ARLanguage {
     LanguageGlobaleVar.update: "تحديث",
     LanguageGlobaleVar.confirmOrder: "تأكيد الطلب",
     LanguageGlobaleVar.orderDetails: "تفاصيل الطلب",
+    LanguageGlobaleVar.active: "نشط",
+    LanguageGlobaleVar.completed: "كامل",
+    LanguageGlobaleVar.cancelled: "ملغي",
   };
 }

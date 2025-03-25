@@ -21,7 +21,7 @@ class TopSectionMyOrderBody extends StatelessWidget {
               (index) => CustomButtonOfOrder(
                 onTap: () =>
                     MyOrderCubit.get(context).changeCurrentIndex(index),
-                title: MyOrderCubit.get(context).myOrderType[index],
+                title: MyOrderCubit.get(context).getMyOrderTypeTitil()[index],
                 isActive: index == MyOrderCubit.get(context).currentIndex,
               ),
             ),

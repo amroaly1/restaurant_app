@@ -49,7 +49,7 @@ class LogInBody extends StatelessWidget {
                   spacing: HeightManager.h22,
                   children: [
                     Text(
-                      LanguageGlobaleVar.welcome,
+                      LanguageGlobaleVar.welcome.tr,
                       style: TextStyleManager.semiBoald(
                         size: TextSizeManager.s24,
                       ),

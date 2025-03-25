@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/localization/language_globale_var.dart';
 import 'package:ecommerce_app/features/my_orders/data/model/my_order_model.dart';
 import 'package:ecommerce_app/features/my_orders/data/model/order_type_model.dart';
 import 'package:ecommerce_app/features/my_orders/data/repo/my_order_repo.dart';
@@ -7,6 +8,7 @@ import 'package:ecommerce_app/features/my_orders/presentation/widget/list_of_can
 import 'package:ecommerce_app/features/my_orders/presentation/widget/list_of_complete_task.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:get/get.dart';
 
 class MyOrderCubit extends Cubit<MyOrderState> {
   // MyOrderCubit() : super(MyOrderStateInitial()) {
@@ -55,11 +57,14 @@ class MyOrderCubit extends Cubit<MyOrderState> {
   }
 
   int currentIndex = 0;
-  List<String> myOrderType = [
-    "Active",
-    "Completed",
-    "Cancelled",
-  ];
+
+  List<String> getMyOrderTypeTitil() {
+    return [
+      LanguageGlobaleVar.active.tr,
+      LanguageGlobaleVar.completed.tr,
+      LanguageGlobaleVar.cancelled.tr,
+    ];
+  }
 
   void changeCurrentIndex(int index) {
     if (orderModel != null) {

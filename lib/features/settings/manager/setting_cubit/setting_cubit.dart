@@ -1,6 +1,7 @@
 import 'dart:developer';
 import 'dart:ui';
 
+import 'package:ecommerce_app/core/helper/get_current_language.dart';
 import 'package:ecommerce_app/features/settings/manager/setting_cubit/setting_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
@@ -15,7 +16,7 @@ class SettingCubit extends Cubit<SettingState> {
       Get.updateLocale(
         Locale("ar", "EG"),
       );
-
+      changeCurrentLnaguage("ar");
       emit(SettingChangeLanguage());
     }
   }
@@ -26,7 +27,7 @@ class SettingCubit extends Cubit<SettingState> {
       Get.updateLocale(
         Locale("en", "US"),
       );
-
+      changeCurrentLnaguage("en");
       emit(SettingChangeLanguage());
     }
   }

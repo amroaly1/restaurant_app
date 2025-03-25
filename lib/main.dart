@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/helper/get_current_language.dart';
 import 'package:ecommerce_app/core/localization/languages.dart';
 import 'package:ecommerce_app/core/storage/cache_helper.dart';
 import 'package:ecommerce_app/core/utils/color_manager.dart';
@@ -22,7 +23,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       translations: Languages(),
-      locale: Locale("en", "US"),
+      locale: getCurrentLanguage(),
       title: 'Flutter Demo',
       theme: ThemeData(
         scaffoldBackgroundColor: ColorManager.primaryColor,

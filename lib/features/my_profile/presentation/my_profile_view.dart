@@ -80,15 +80,15 @@ class MyProfileView extends StatelessWidget {
                         onSelected: MyProfileCubit.get(context).updateImage,
                       ),
                       CustomTextFieldAndLabel(
-                        labelText: LanguageGlobaleVar.fullname,
-                        hintText: LanguageGlobaleVar.fullname,
+                        labelText: LanguageGlobaleVar.fullname.tr,
+                        hintText: LanguageGlobaleVar.fullname.tr,
                         validator: AppValidator.fullNameValidator,
                         controller:
                             MyProfileCubit.get(context).fullNameController,
                       ),
                       CustomTextFieldAndLabel(
-                        labelText: LanguageGlobaleVar.mobileNumber,
-                        hintText: LanguageGlobaleVar.mobileNumber,
+                        labelText: LanguageGlobaleVar.mobileNumber.tr,
+                        hintText: LanguageGlobaleVar.mobileNumber.tr,
                         validator: AppValidator.mobileNumberValidator,
                         controller:
                             MyProfileCubit.get(context).mobileNumberController,

@@ -68,4 +68,7 @@ class LanguageGlobaleVar {
   static const String card = "card";
   static const String confirmOrder = "confirmorder";
   static const String orderDetails = "Order Details";
+  static const String active = "Active";
+  static const String completed = "Completed";
+  static const String cancelled = "Cancelled";
 }
