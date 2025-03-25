@@ -7,8 +7,8 @@ import 'package:ecommerce_app/core/widget/custom_circle_progress_indicator.dart'
 import 'package:ecommerce_app/core/widget/custom_white_background.dart';
 import 'package:ecommerce_app/features/my_orders/manager/my_order_cubit/my_order_cubit.dart';
 import 'package:ecommerce_app/features/my_orders/manager/my_order_cubit/my_order_state.dart';
-import 'package:ecommerce_app/features/my_orders/presentation/widget/custom_button_of_order.dart';
 import 'package:ecommerce_app/features/my_orders/presentation/widget/no_date_my_order.dart';
+import 'package:ecommerce_app/features/my_orders/presentation/widget/top_section_my_order_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -26,27 +26,7 @@ class MyOrderBody extends StatelessWidget {
             if (state is MyOrderGetDataLaoding) {
               return CustomScrollView(
                 slivers: [
-                  SliverToBoxAdapter(
-                    child: Column(
-                      children: [
-                        SizedBox(height: HeightManager.h27),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: List.generate(
-                            3,
-                            (index) => CustomButtonOfOrder(
-                              onTap: () => MyOrderCubit.get(context)
-                                  .changeCurrentIndex(index),
-                              title:
-                                  MyOrderCubit.get(context).myOrderType[index],
-                              isActive: index ==
-                                  MyOrderCubit.get(context).currentIndex,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  TopSectionMyOrderBody(),
                   SliverFillRemaining(
                     child: Center(
                       child: CustomCircleProgressIndicator(),
@@ -57,27 +37,7 @@ class MyOrderBody extends StatelessWidget {
             } else if (state is MyOrderGetDataFailing) {
               return CustomScrollView(
                 slivers: [
-                  SliverToBoxAdapter(
-                    child: Column(
-                      children: [
-                        SizedBox(height: HeightManager.h27),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: List.generate(
-                            3,
-                            (index) => CustomButtonOfOrder(
-                              onTap: () => MyOrderCubit.get(context)
-                                  .changeCurrentIndex(index),
-                              title:
-                                  MyOrderCubit.get(context).myOrderType[index],
-                              isActive: index ==
-                                  MyOrderCubit.get(context).currentIndex,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  TopSectionMyOrderBody(),
                   SliverFillRemaining(
                     child: Center(
                       child: Text(
@@ -94,27 +54,7 @@ class MyOrderBody extends StatelessWidget {
             }
             return CustomScrollView(
               slivers: [
-                SliverToBoxAdapter(
-                  child: Column(
-                    children: [
-                      SizedBox(height: HeightManager.h27),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: List.generate(
-                          3,
-                          (index) => CustomButtonOfOrder(
-                            onTap: () => MyOrderCubit.get(context)
-                                .changeCurrentIndex(index),
-                            title: MyOrderCubit.get(context).myOrderType[index],
-                            isActive:
-                                index == MyOrderCubit.get(context).currentIndex,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
+                TopSectionMyOrderBody(),
                 MyOrderCubit.get(context).orderType.isEmpty
                     ? NoDataMyOrder()
                     : SliverToBoxAdapter(

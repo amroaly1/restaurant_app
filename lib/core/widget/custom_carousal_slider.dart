@@ -55,9 +55,7 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
                 child: PageView.builder(
                   onPageChanged: CaroaslCubit.get(context).onIndexChage,
                   controller: CaroaslCubit.get(context).pageController,
-                  itemCount: CaroaslCubit.get(context).data.length <= 5
-                      ? CaroaslCubit.get(context).data.length
-                      : 5,
+                  itemCount: CaroaslCubit.get(context).getLenght(),
                   itemBuilder: (context, index) {
                     return Stack(
                       children: [
@@ -70,34 +68,42 @@ class _CustomCarouselSliderState extends State<CustomCarouselSlider> {
                           child: Row(
                             children: [
                               Expanded(
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Center(
-                                      child: Text(
+                                child: Padding(
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: WidthManager.w12),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Center(
+                                        child: Text(
+                                          CaroaslCubit.get(context)
+                                              .data[index]
+                                              .title,
+                                          style: TextStyleManager.regular(
+                                            size: TextSizeManager.s16,
+                                            color: ColorManager.whiteColor,
+                                            height: 2,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                          maxLines: 2,
+                                        ),
+                                      ),
+                                      Text(
                                         CaroaslCubit.get(context)
                                             .data[index]
-                                            .title,
-                                        style: TextStyleManager.regular(
-                                          size: TextSizeManager.s18,
+                                            .description,
+                                        style: TextStyleManager.bold(
+                                          size: TextSizeManager.s28,
                                           color: ColorManager.whiteColor,
+                                          height: 1,
                                         ),
-                                        textAlign: TextAlign.center,
                                         maxLines: 2,
-                                      ),
-                                    ),
-                                    Text(
-                                      CaroaslCubit.get(context)
-                                          .data[index]
-                                          .description,
-                                      style: TextStyleManager.bold(
-                                        size: TextSizeManager.s20,
-                                        color: ColorManager.whiteColor,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                    )
-                                  ],
+                                        textAlign: TextAlign.center,
+                                      )
+                                    ],
+                                  ),
                                 ),
                               ),
                               Expanded(

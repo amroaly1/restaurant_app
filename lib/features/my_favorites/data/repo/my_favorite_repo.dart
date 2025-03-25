@@ -1,5 +1,4 @@
 import 'package:dartz/dartz.dart';
-import 'package:ecommerce_app/core/constant/constant.dart';
 import 'package:ecommerce_app/core/network/api_end_point.dart';
 import 'package:ecommerce_app/core/network/api_helper.dart';
 import 'package:ecommerce_app/core/network/dio_failure.dart';

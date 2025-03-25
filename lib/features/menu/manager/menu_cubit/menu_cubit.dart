@@ -20,7 +20,9 @@ class MenuCubit extends Cubit<MenuState> {
     response.fold((error) => emit(MenuGetDataFailing(errMessage: error)),
         (data) {
       this.data = data;
-      emit(MenuGetDataSuccess());
+      if (!isClosed) {
+        emit(MenuGetDataSuccess());
+      }
     });
   }
 

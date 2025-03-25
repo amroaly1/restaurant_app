@@ -38,12 +38,16 @@ class CaroaslCubit extends Cubit<CarosalState> {
     emit(CarosalChangeIndex());
   }
 
+  int getLenght() {
+    return data.length <= 5 ? data.length : 5;
+  }
+
   void repeate() {
     _timer = Timer.periodic(
       Duration(seconds: 10),
       (t) {
         currentIndex = pageController.page?.toInt() ?? 0;
-        if (currentIndex == (data.length - 1)) {
+        if (currentIndex == (getLenght() - 1)) {
           currentIndex = 0;
           pageController.animateToPage(currentIndex,
               duration: Duration(milliseconds: 500), curve: Curves.easeOut);

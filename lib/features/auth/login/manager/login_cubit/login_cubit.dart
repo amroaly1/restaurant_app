@@ -28,7 +28,11 @@ class LoginCubit extends Cubit<LoginState> {
       var response = await repo.login(
           email: emailController.text, password: passwordController.text);
       response.fold((errMessage) => emit(LoginFailing(errMessage: errMessage)),
-          (r) => emit(LoginSuccess()));
+          (r) {
+        if (!isClosed) {
+          emit(LoginSuccess());
+        }
+      });
     } else {
       autovalidateMode = AutovalidateMode.always;
       emit(LoginNotValdiateInput());

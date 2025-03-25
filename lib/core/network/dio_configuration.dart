@@ -6,7 +6,7 @@ abstract class DioConfiguration {
   static BaseOptions baseOptions() {
     return BaseOptions(
       baseUrl: ApiBaseUrl.baseUrl,
-      connectTimeout: Duration(seconds: 5),
+      connectTimeout: Duration(seconds: 20),
       receiveTimeout: Duration(seconds: 60),
     );
   }
