@@ -72,5 +72,6 @@ class ENLanguage {
     LanguageGlobaleVar.active: "Active",
     LanguageGlobaleVar.completed: "Completed",
     LanguageGlobaleVar.cancelled: "ancelled",
+    LanguageGlobaleVar.searchAbout: "search about what you want",
   };
 }

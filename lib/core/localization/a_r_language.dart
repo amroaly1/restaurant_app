@@ -68,5 +68,6 @@ class ARLanguage {
     LanguageGlobaleVar.active: "نشط",
     LanguageGlobaleVar.completed: "كامل",
     LanguageGlobaleVar.cancelled: "ملغي",
+    LanguageGlobaleVar.searchAbout: "ابحث عما تريد",
   };
 }

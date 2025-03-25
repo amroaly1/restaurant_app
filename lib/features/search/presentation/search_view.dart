@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/core/helper/arrow_direction.dart';
 import 'package:ecommerce_app/core/helper/device_width_height.dart';
+import 'package:ecommerce_app/core/localization/language_globale_var.dart';
 import 'package:ecommerce_app/core/route/route_manager.dart';
 import 'package:ecommerce_app/core/utils/color_manager.dart';
 import 'package:ecommerce_app/core/utils/height_and_width_manager.dart';
@@ -15,6 +16,7 @@ import 'package:ecommerce_app/features/search/presentation/widget/custom_text_fi
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key});
@@ -41,7 +43,7 @@ class SearchView extends StatelessWidget {
             ),
             centerTitle: true,
             title: CustomTextField(
-              onSubmitted: SearchCubit.get(context).onSubmit,
+              onChanged: SearchCubit.get(context).onChangeText,
             ),
           ),
           body: CustomWhiteBackground(
@@ -76,7 +78,14 @@ class SearchView extends StatelessWidget {
                       ],
                     );
                   } else {
-                    return Column();
+                    return Center(
+                      child: Text(
+                        LanguageGlobaleVar.searchAbout.tr,
+                        style: TextStyleManager.regular(
+                          size: TextSizeManager.s20,
+                        ),
+                      ),
+                    );
                   }
                 },
               ),

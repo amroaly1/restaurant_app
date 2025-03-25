@@ -71,4 +71,5 @@ class LanguageGlobaleVar {
   static const String active = "Active";
   static const String completed = "Completed";
   static const String cancelled = "Cancelled";
+  static const String searchAbout = "search about what you want";
 }

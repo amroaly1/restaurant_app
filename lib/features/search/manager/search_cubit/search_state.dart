@@ -6,6 +6,8 @@ class SearchInit extends SearchState {}
 
 class SearchLaoding extends SearchState {}
 
+class SearchIsEmpty extends SearchState {}
+
 class SearchFailing extends SearchState {
   final String errMessage;
 

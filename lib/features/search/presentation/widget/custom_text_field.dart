@@ -9,8 +9,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({super.key, this.onSubmitted});
+  const CustomTextField({super.key, this.onSubmitted, this.onChanged});
   final void Function(String)? onSubmitted;
+  final void Function(String)? onChanged;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,7 +20,7 @@ class CustomTextField extends StatelessWidget {
       child: InkWell(
         onTap: () {},
         child: TextField(
-          onChanged: (value) {},
+          onChanged: onChanged,
           onSubmitted: onSubmitted,
           style: TextStyleManager.light(
             size: TextSizeManager.s18,
