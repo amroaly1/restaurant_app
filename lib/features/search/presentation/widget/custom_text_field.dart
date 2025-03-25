@@ -9,8 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CustomTextField extends StatelessWidget {
-  const CustomTextField({super.key});
-
+  const CustomTextField({super.key, this.onSubmitted});
+  final void Function(String)? onSubmitted;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -20,6 +20,7 @@ class CustomTextField extends StatelessWidget {
         onTap: () {},
         child: TextField(
           onChanged: (value) {},
+          onSubmitted: onSubmitted,
           style: TextStyleManager.light(
             size: TextSizeManager.s18,
             color: ColorManager.grey1Color,

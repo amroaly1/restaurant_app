@@ -30,6 +30,7 @@ class CustomOfCompleteOrCancelTask extends StatelessWidget {
           InkWell(
             onTap: onTap,
             child: Container(
+              clipBehavior: Clip.antiAlias,
               height: DeviceWidthHeight.perentageOfHeight(HeightManager.h108),
               width: DeviceWidthHeight.perentageOfWidth(WidthManager.w72),
               decoration: BoxDecoration(

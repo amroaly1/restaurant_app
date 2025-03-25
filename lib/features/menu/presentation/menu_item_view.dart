@@ -1,7 +1,6 @@
 import 'package:ecommerce_app/core/helper/device_width_height.dart';
 import 'package:ecommerce_app/core/localization/language_globale_var.dart';
 import 'package:ecommerce_app/core/utils/asset_icon_manager.dart';
-import 'package:ecommerce_app/core/utils/asset_image_manager.dart';
 import 'package:ecommerce_app/core/utils/color_manager.dart';
 import 'package:ecommerce_app/core/utils/height_and_width_manager.dart';
 import 'package:ecommerce_app/core/utils/padding_manager.dart';
@@ -118,7 +117,8 @@ class MenuItemView extends StatelessWidget {
                           height: HeightManager.h61,
                         ),
                         InkWell(
-                          onTap: MenuItemCubit.get(context).addToCard,
+                          onTap: () =>
+                              MenuItemCubit.get(context).addToCard(product),
                           child: Center(
                             child: Container(
                               width: DeviceWidthHeight.perentageOfWidth(

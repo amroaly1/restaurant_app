@@ -27,6 +27,7 @@ class CustomListOfOrderDetails extends StatelessWidget {
           child: Row(
             children: [
               Container(
+                clipBehavior: Clip.antiAlias,
                 height: DeviceWidthHeight.perentageOfHeight(HeightManager.h108),
                 width: DeviceWidthHeight.perentageOfWidth(WidthManager.w72),
                 decoration: BoxDecoration(

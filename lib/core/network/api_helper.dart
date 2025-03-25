@@ -21,10 +21,12 @@ class ApiHelper {
     bool isRefrsh = false,
     bool isForm = true,
     Map<String, dynamic>? data,
+    Map<String, dynamic>? queryParameters,
   }) async {
     try {
       var response = await _dio.get(endPoint,
           data: handelData(isForm: isForm, data: data),
+          queryParameters: queryParameters,
           options:
               Options(headers: _getOption(isAuth, isReferechToken: isRefrsh)));
       return response.data;

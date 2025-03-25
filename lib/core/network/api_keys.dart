@@ -40,4 +40,5 @@ abstract class ApiKeys {
   static const String isfavorite = "is_favorite";
   static const String bestsellerproducts = "best_seller_products";
   static const String productid = "product_id";
+  static const String categories = "categories";
 }

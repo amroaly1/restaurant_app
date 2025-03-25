@@ -1,3 +1,7 @@
+import 'package:ecommerce_app/core/helper/app_message.dart';
+import 'package:ecommerce_app/core/helper/my_card_function.dart';
+import 'package:ecommerce_app/core/model/my_card_model.dart';
+import 'package:ecommerce_app/core/utils/color_manager.dart';
 import 'package:ecommerce_app/features/home/data/model/product_model.dart';
 import 'package:ecommerce_app/features/home/data/repo/home_repo.dart';
 import 'package:ecommerce_app/features/menu/manager/menu_item_cubit/menu_item_state.dart';
@@ -22,7 +26,7 @@ class MenuItemCubit extends Cubit<MenuItemState> {
   }
 
   bool canDecrease() {
-    return count > 0;
+    return count > 1;
   }
 
   void addToFavOrRemove(ProductModel product) async {
@@ -39,7 +43,21 @@ class MenuItemCubit extends Cubit<MenuItemState> {
     return product.isFavorite ? Icons.favorite : Icons.favorite_border;
   }
 
-  void addToCard() {
+  MyCardFunction myCard = MyCardFunction();
+  void addToCard(ProductModel product) {
     // toDo add to card
+    if (myCard.addProductToCard(MyCardModel(product: product, count: count))) {
+      AppMessage.showMessage1(
+        title: "Add To My Card",
+        body: "Done✅",
+        icon: Icons.check,
+        colorIcon: ColorManager.green,
+      );
+    } else {
+      AppMessage.showMessage1(
+        title: "Add To My Card",
+        body: "Is Aready Added",
+      );
+    }
   }
 }

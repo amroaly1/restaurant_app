@@ -6,7 +6,6 @@ import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
 import 'package:ecommerce_app/features/menu/data/model/category_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class CustomCardCategory extends StatelessWidget {
   const CustomCardCategory({
@@ -32,14 +31,14 @@ class CustomCardCategory extends StatelessWidget {
               RaduisManager.r30,
             ),
           ),
-          child: SvgPicture.asset(
-            categoryModel.icon,
+          child: Image.network(
+            categoryModel.imagePath,
             height: DeviceWidthHeight.perentageOfHeight(HeightManager.h44),
             fit: BoxFit.fill,
           ),
         ),
         Text(
-          categoryModel.label,
+          categoryModel.title,
           style: TextStyleManager.regular(size: TextSizeManager.s12),
         )
       ],

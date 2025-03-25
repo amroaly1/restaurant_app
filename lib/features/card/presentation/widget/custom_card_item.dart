@@ -1,19 +1,21 @@
 import 'package:ecommerce_app/core/helper/device_width_height.dart';
+import 'package:ecommerce_app/core/model/my_card_model.dart';
 import 'package:ecommerce_app/core/utils/asset_icon_manager.dart';
-import 'package:ecommerce_app/core/utils/asset_image_manager.dart';
 import 'package:ecommerce_app/core/utils/color_manager.dart';
 import 'package:ecommerce_app/core/utils/height_and_width_manager.dart';
 import 'package:ecommerce_app/core/utils/raduis_manager.dart';
 import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
+import 'package:ecommerce_app/features/card/manager/card_cubit/card_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class CustomCardItem extends StatelessWidget {
   const CustomCardItem({
     super.key,
+    required this.card,
   });
-
+  final MyCardModel card;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -38,8 +40,8 @@ class CustomCardItem extends StatelessWidget {
                     RaduisManager.r20,
                   ),
                 ),
-                child: Image.asset(
-                  AssetImageManager.cardtest,
+                child: Image.network(
+                  card.product.imagePath,
                   fit: BoxFit.fill,
                 ),
               ),
@@ -48,7 +50,7 @@ class CustomCardItem extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Strawberry Shake",
+                    card.product.name,
                     style: TextStyleManager.meduim(
                       size: TextSizeManager.s20,
                     ),
@@ -57,7 +59,7 @@ class CustomCardItem extends StatelessWidget {
                     height: HeightManager.h5,
                   ),
                   Text(
-                    "\$20.00",
+                    "\$${card.product.price}",
                     style: TextStyleManager.light(
                       size: TextSizeManager.s14,
                     ),
@@ -70,9 +72,7 @@ class CustomCardItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               InkWell(
-                onTap: () {
-                  // to do delete from card
-                },
+                onTap: () => CardCubit.get(context).delete(card),
                 child: SvgPicture.asset(
                   AssetIconManager.deleteicon,
                 ),
@@ -83,11 +83,11 @@ class CustomCardItem extends StatelessWidget {
                   ButtonAddOrRemove(
                     icon: Icons.remove,
                     onTap: () {
-                      // to decrease count
+                      CardCubit.get(context).decrease(card);
                     },
                   ),
                   Text(
-                    "1",
+                    card.count.toString(),
                     style: TextStyleManager.regular(
                       size: TextSizeManager.s18,
                     ),
@@ -95,7 +95,7 @@ class CustomCardItem extends StatelessWidget {
                   ButtonAddOrRemove(
                     icon: Icons.add,
                     onTap: () {
-                      // to increase count
+                      CardCubit.get(context).increase(card);
                     },
                   ),
                 ],

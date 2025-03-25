@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/core/helper/device_width_height.dart';
+import 'package:ecommerce_app/core/model/my_card_model.dart';
 import 'package:ecommerce_app/core/utils/asset_image_manager.dart';
 import 'package:ecommerce_app/core/utils/color_manager.dart';
 import 'package:ecommerce_app/core/utils/height_and_width_manager.dart';
@@ -8,8 +9,8 @@ import 'package:ecommerce_app/core/utils/text_style_manager.dart';
 import 'package:flutter/material.dart';
 
 class CustomCardOfConfirmOrder extends StatelessWidget {
-  const CustomCardOfConfirmOrder({super.key});
-
+  const CustomCardOfConfirmOrder({super.key, required this.card});
+  final MyCardModel card;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -31,8 +32,8 @@ class CustomCardOfConfirmOrder extends StatelessWidget {
                 RaduisManager.r20,
               ),
             ),
-            child: Image.asset(
-              AssetImageManager.cardtest,
+            child: Image.network(
+              card.product.imagePath,
               fit: BoxFit.fill,
             ),
           ),
@@ -42,7 +43,7 @@ class CustomCardOfConfirmOrder extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Strawberry Shake",
+                  card.product.name,
                   style: TextStyleManager.meduim(
                     size: TextSizeManager.s20,
                   ),
@@ -54,14 +55,14 @@ class CustomCardOfConfirmOrder extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "1 items",
+                      "${card.count} items",
                       style: TextStyleManager.light(
                         size: TextSizeManager.s14,
                         color: ColorManager.greyColor,
                       ),
                     ),
                     Text(
-                      "\$20.00",
+                      "\$${card.product.price}",
                       style: TextStyleManager.meduim(
                         size: TextSizeManager.s20,
                         color: ColorManager.secondaryColor,

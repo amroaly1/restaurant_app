@@ -11,4 +11,7 @@ abstract class ApiEndPoint {
   static const String bestsellerproducts = "best_seller_products";
   static const String topratedproducts = "top_rated_products";
   static const String addtofavorite = "add_to_favorite";
+  static const String categories = "categories";
+  static const String placeorder = "place_order";
+  static const String search = "products/search";
 }

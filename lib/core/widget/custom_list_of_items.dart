@@ -12,6 +12,7 @@ class CustomListOfItems extends StatelessWidget {
     required this.data,
   });
   final List<ProductModel> data;
+
   @override
   Widget build(BuildContext context) {
     return Expanded(

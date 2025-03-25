@@ -1,6 +1,5 @@
 import 'package:ecommerce_app/core/helper/device_width_height.dart';
 import 'package:ecommerce_app/core/utils/asset_icon_manager.dart';
-import 'package:ecommerce_app/core/utils/asset_image_manager.dart';
 import 'package:ecommerce_app/core/utils/color_manager.dart';
 import 'package:ecommerce_app/core/utils/font_family_manager.dart';
 import 'package:ecommerce_app/core/utils/height_and_width_manager.dart';
