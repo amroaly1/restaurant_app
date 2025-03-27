@@ -9,6 +9,7 @@ class BestSellerCubit extends Cubit<BestSellerState> {
   static BestSellerCubit get(context) => BlocProvider.of(context);
   HomeRepo repo = HomeRepo();
   void getData() async {
+    emit(BestSellerLoading());
     var res = await repo.getBestSeller();
 
     res.fold(

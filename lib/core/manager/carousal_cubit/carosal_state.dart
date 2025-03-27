@@ -19,3 +19,5 @@ class CarosalGetDataFailure extends CarosalState {
 }
 
 class CarosalChangeIndex extends CarosalState {}
+
+class CarosalChangePage extends CarosalState {}

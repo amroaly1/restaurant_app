@@ -11,6 +11,7 @@ class TopRateCubit extends Cubit<TopRateState> {
   HomeRepo repo = HomeRepo();
   List<ProductModel> data = [];
   void getDate() async {
+    emit(TopRateLoading());
     var res = await repo.getTopRate();
 
     res.fold(

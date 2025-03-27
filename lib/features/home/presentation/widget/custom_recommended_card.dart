@@ -10,6 +10,7 @@ import 'package:ecommerce_app/core/utils/text_style_manager.dart';
 import 'package:ecommerce_app/features/home/data/model/product_model.dart';
 import 'package:ecommerce_app/features/home/manager/top_rating_cubit/top_rate_cubit.dart';
 import 'package:ecommerce_app/features/home/manager/top_rating_cubit/top_rate_state.dart';
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -25,14 +26,20 @@ class CustomRecommendedCard extends StatelessWidget {
     return Stack(
       children: [
         Container(
+          clipBehavior: Clip.antiAlias,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(RaduisManager.r12),
-            image: DecorationImage(
-              image: NetworkImage(
-                productModel.imagePath,
-              ),
-              fit: BoxFit.fill,
-            ),
+            // image: DecorationImage(
+            //   image: NetworkImage(
+            //     productModel.imagePath,
+            //   ),
+            //   fit: BoxFit.fill,
+            // ),
+          ),
+          child: FancyShimmerImage(
+            shimmerBaseColor: ColorManager.secondaryColor,
+            shimmerHighlightColor: ColorManager.greyColor,
+            imageUrl: productModel.imagePath,
           ),
         ),
         PositionedDirectional(

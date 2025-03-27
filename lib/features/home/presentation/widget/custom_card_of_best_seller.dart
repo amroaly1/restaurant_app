@@ -5,6 +5,7 @@ import 'package:ecommerce_app/core/utils/raduis_manager.dart';
 import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
 import 'package:ecommerce_app/features/home/data/model/product_model.dart';
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 
 class CustomCardOfBestSeller extends StatelessWidget {
@@ -18,6 +19,7 @@ class CustomCardOfBestSeller extends StatelessWidget {
     return Stack(
       children: [
         Container(
+          clipBehavior: Clip.antiAlias,
           width: DeviceWidthHeight.perentageOfWidth(
             WidthManager.w72,
           ),
@@ -26,12 +28,15 @@ class CustomCardOfBestSeller extends StatelessWidget {
           ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(RaduisManager.r20),
-            image: DecorationImage(
-              image: NetworkImage(
-                product.imagePath,
-              ),
-              fit: BoxFit.fill,
+          ),
+          child: FancyShimmerImage(
+            shimmerBaseColor: ColorManager.greyColor,
+            shimmerHighlightColor: ColorManager.secondaryColor,
+            errorWidget: Icon(
+              Icons.close,
+              color: ColorManager.redColor,
             ),
+            imageUrl: product.imagePath,
           ),
         ),
         PositionedDirectional(
@@ -40,6 +45,7 @@ class CustomCardOfBestSeller extends StatelessWidget {
           child: Container(
             padding: EdgeInsetsDirectional.only(
               start: WidthManager.w7,
+              end: WidthManager.w4,
             ),
             decoration: BoxDecoration(
               color: ColorManager.secondaryColor,
