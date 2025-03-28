@@ -1,4 +1,6 @@
 import 'package:ecommerce_app/core/route/route_manager.dart';
+import 'package:ecommerce_app/core/storage/cache_helper.dart';
+import 'package:ecommerce_app/core/storage/storage_key.dart';
 import 'package:ecommerce_app/core/utils/color_manager.dart';
 import 'package:ecommerce_app/core/utils/height_and_width_manager.dart';
 import 'package:ecommerce_app/core/utils/padding_manager.dart';
@@ -52,7 +54,27 @@ class ProfileView extends StatelessWidget {
                       isEnd: false,
                       model: ProfileRepo.settingCardsData()[
                           ProfileRepo.settingCardsData().length - 1],
-                      onTap: () {
+                      onTap: () async {
+                        CacheHelper cacheHelper = CacheHelper();
+                        await cacheHelper.saveData(
+                          key: StorageKey.isLogin,
+                          value: false,
+                        );
+                        await cacheHelper.removeData(
+                          key: StorageKey.accesstoken,
+                        );
+                        await cacheHelper.removeData(
+                          key: StorageKey.refreshtoken,
+                        );
+                        await cacheHelper.removeData(
+                          key: StorageKey.imagepath,
+                        );
+                        await cacheHelper.removeData(
+                          key: StorageKey.email,
+                        );
+                        await cacheHelper.removeData(
+                          key: StorageKey.phone,
+                        );
                         RouteManager.navigateToAndRemoveAllScreenFromStack(
                           WelcomeView(),
                         );

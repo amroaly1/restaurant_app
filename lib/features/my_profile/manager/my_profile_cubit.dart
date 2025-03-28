@@ -41,6 +41,7 @@ class MyProfileCubit extends Cubit<MyProfileState> {
   MyProfileRepo repo = MyProfileRepo();
 
   void onTap() async {
+    emit(MyProfileLoading());
     if (globalKey.currentState!.validate()) {
       var response = await repo.updateData(
         name: fullNameController.text,

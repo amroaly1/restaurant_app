@@ -1,14 +1,11 @@
+import 'package:ecommerce_app/core/helper/app_handel_next_screen.dart';
 import 'package:ecommerce_app/core/helper/get_current_language.dart';
 import 'package:ecommerce_app/core/localization/languages.dart';
 import 'package:ecommerce_app/core/storage/cache_helper.dart';
 import 'package:ecommerce_app/core/utils/color_manager.dart';
 import 'package:ecommerce_app/core/utils/font_family_manager.dart';
-import 'package:ecommerce_app/features/home/presentation/home_view.dart';
-import 'package:ecommerce_app/features/on_boarding/presentation/on_bording_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'core/storage/storage_key.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,9 +29,7 @@ class MyApp extends StatelessWidget {
         fontFamily: FontFamilyManager.leagueSpartan,
         useMaterial3: true,
       ),
-      home: CacheHelper().getDataString(key: StorageKey.accesstoken) != null
-          ? HomeView()
-          : OnBordingView(),
+      home: handelNexyScreen(),
     );
   }
 }

@@ -14,7 +14,9 @@ class MenuCubit extends Cubit<MenuState> {
   CategoryRepo repo = CategoryRepo();
 
   List<CategoryModel> data = [];
+
   void getData() async {
+    emit(MenuGetDataLoading());
     var response = await repo.getCategory();
 
     response.fold((error) => emit(MenuGetDataFailing(errMessage: error)),

@@ -20,31 +20,36 @@ class MyOrdersView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider.value(
       value: MyOrderCubit()..getOrder(),
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: ColorManager.primaryColor,
-          toolbarHeight: DeviceWidthHeight.perentageOfHeight(
-            HeightManager.h129,
-          ),
-          leading: InkWell(
-            onTap: () {
-              RouteManager.backFrom();
-            },
-            child: SvgPicture.asset(
-              ArrowDirection.arrowDirectionEnLeft(),
-              fit: BoxFit.scaleDown,
+      child: RefreshIndicator(
+        onRefresh: () async {
+          MyOrderCubit().getOrder();
+        },
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: ColorManager.primaryColor,
+            toolbarHeight: DeviceWidthHeight.perentageOfHeight(
+              HeightManager.h129,
+            ),
+            leading: InkWell(
+              onTap: () {
+                RouteManager.backFrom();
+              },
+              child: SvgPicture.asset(
+                ArrowDirection.arrowDirectionEnLeft(),
+                fit: BoxFit.scaleDown,
+              ),
+            ),
+            centerTitle: true,
+            title: Text(
+              LanguageGlobaleVar.myOrders.tr,
+              style: TextStyleManager.bold(
+                size: TextSizeManager.s28,
+                color: ColorManager.whiteColor,
+              ),
             ),
           ),
-          centerTitle: true,
-          title: Text(
-            LanguageGlobaleVar.myOrders.tr,
-            style: TextStyleManager.bold(
-              size: TextSizeManager.s28,
-              color: ColorManager.whiteColor,
-            ),
-          ),
+          body: MyOrderBody(),
         ),
-        body: MyOrderBody(),
       ),
     );
   }

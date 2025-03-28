@@ -2,6 +2,8 @@ import 'dart:developer';
 
 import 'package:ecommerce_app/core/helper/arrow_direction.dart';
 import 'package:ecommerce_app/core/route/route_manager.dart';
+import 'package:ecommerce_app/core/storage/cache_helper.dart';
+import 'package:ecommerce_app/core/storage/storage_key.dart';
 import 'package:ecommerce_app/features/on_boarding/manager/on_bording_cubit/on_bording_state.dart';
 import 'package:ecommerce_app/features/welcome/presentation/welcome_view.dart';
 import 'package:flutter/material.dart';
@@ -27,8 +29,10 @@ class OnBoardingCubit extends Cubit<OnBordingState> {
     }
   }
 
-  void goToWelcomScreen() {
+  void goToWelcomScreen() async {
     // toDo go to wellocm screen
+    CacheHelper cacheHelper = CacheHelper();
+    await cacheHelper.saveData(key: StorageKey.isVisitOnBoarding, value: true);
     RouteManager.navigateToAndNoOptionToBack(WelcomeView());
   }
 

@@ -24,7 +24,7 @@ class SearchCubit extends Cubit<SearchState> {
     if (_debouncing?.isActive ?? false) {
       _debouncing!.cancel();
     }
-    _debouncing = Timer(Duration(seconds: 2), () {
+    _debouncing = Timer(Duration(milliseconds: 1500), () {
       search(word);
     });
   }

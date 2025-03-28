@@ -11,6 +11,7 @@ import 'package:ecommerce_app/features/my_orders/data/model/order_type_model.dar
 import 'package:ecommerce_app/features/my_orders/manager/my_order_cubit/my_order_cubit.dart';
 import 'package:ecommerce_app/features/my_orders/presentation/order_details_view.dart';
 import 'package:ecommerce_app/features/my_orders/presentation/widget/custom_button_of_order.dart';
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 
 class ListOfActiveOrder extends StatelessWidget {
@@ -73,9 +74,11 @@ class CustomCardOfActiveOrder extends StatelessWidget {
                   RaduisManager.r20,
                 ),
               ),
-              child: Image.network(
-                item.imagePath,
-                fit: BoxFit.fill,
+              child: FancyShimmerImage(
+                shimmerBaseColor: ColorManager.greyColor,
+                shimmerHighlightColor: ColorManager.secondaryColor,
+                boxFit: BoxFit.fill,
+                imageUrl: item.imagePath,
               ),
             ),
           ),

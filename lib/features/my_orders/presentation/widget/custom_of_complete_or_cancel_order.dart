@@ -6,6 +6,7 @@ import 'package:ecommerce_app/core/utils/raduis_manager.dart';
 import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
 import 'package:ecommerce_app/features/my_orders/data/model/item_model.dart';
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -38,9 +39,11 @@ class CustomOfCompleteOrCancelTask extends StatelessWidget {
                   RaduisManager.r20,
                 ),
               ),
-              child: Image.network(
-                item.imagePath,
-                fit: BoxFit.fill,
+              child: FancyShimmerImage(
+                shimmerBaseColor: ColorManager.greyColor,
+                shimmerHighlightColor: ColorManager.secondaryColor,
+                boxFit: BoxFit.fill,
+                imageUrl: item.imagePath,
               ),
             ),
           ),

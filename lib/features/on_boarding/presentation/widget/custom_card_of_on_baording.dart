@@ -9,7 +9,7 @@ import 'package:ecommerce_app/core/widget/custom_indicator.dart';
 import 'package:ecommerce_app/core/widget/custom_white_background.dart';
 import 'package:ecommerce_app/features/on_boarding/data/model/on_bording_model.dart';
 import 'package:ecommerce_app/features/on_boarding/manager/on_bording_cubit/on_boarding_cubit.dart';
-import 'package:ecommerce_app/features/on_boarding/presentation/widget/on_boarding_button.dart';
+import 'package:ecommerce_app/features/on_boarding/presentation/widget/on_bording_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';

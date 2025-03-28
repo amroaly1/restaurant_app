@@ -72,4 +72,8 @@ class LanguageGlobaleVar {
   static const String completed = "Completed";
   static const String cancelled = "Cancelled";
   static const String searchAbout = "search about what you want";
+  static const String subtotal = "Subtotal";
+  static const String taxAndFees = "Tax and Fees";
+  static const String delivery = "Delivery";
+  static const String total = "Total";
 }

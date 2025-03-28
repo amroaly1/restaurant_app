@@ -6,10 +6,11 @@ class MyFavoriteCubit extends Cubit<MyFavoriteState> {
   MyFavoriteCubit() : super(MyFavoriteLaoding()) {
     getData();
   }
-
+  static MyFavoriteCubit get(context) => BlocProvider.of(context);
   MyFavoriteRepo repo = MyFavoriteRepo();
 
   void getData() async {
+    emit(MyFavoriteLaoding());
     var res = await repo.getFavorite();
 
     res.fold((err) => emit(MyFavoriteFailing(errMessage: err)),

@@ -6,4 +6,6 @@ abstract class StorageKey {
   static const String phone = "phone";
   static const String name = "name";
   static const String language = "language";
+  static const String isLogin = "isLogin";
+  static const String isVisitOnBoarding = "isVisitOnBoarding";
 }

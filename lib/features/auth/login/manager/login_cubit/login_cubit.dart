@@ -1,3 +1,5 @@
+import 'package:ecommerce_app/core/storage/cache_helper.dart';
+import 'package:ecommerce_app/core/storage/storage_key.dart';
 import 'package:ecommerce_app/features/auth/login/data/repo/login_repo.dart';
 import 'package:ecommerce_app/features/auth/login/manager/login_cubit/login_state.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +30,9 @@ class LoginCubit extends Cubit<LoginState> {
       var response = await repo.login(
           email: emailController.text, password: passwordController.text);
       response.fold((errMessage) => emit(LoginFailing(errMessage: errMessage)),
-          (r) {
+          (r) async {
+        CacheHelper cacheHelper = CacheHelper();
+        await cacheHelper.saveData(key: StorageKey.isLogin, value: true);
         if (!isClosed) {
           emit(LoginSuccess());
         }

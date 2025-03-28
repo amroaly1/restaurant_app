@@ -27,68 +27,75 @@ class MyFavoritesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => MyFavoriteCubit(),
-      child: Scaffold(
-        appBar: AppBar(
-          backgroundColor: ColorManager.primaryColor,
-          toolbarHeight: DeviceWidthHeight.perentageOfHeight(
-            HeightManager.h129,
-          ),
-          leading: InkWell(
-            onTap: () {
-              RouteManager.backFrom();
-            },
-            child: SvgPicture.asset(
-              ArrowDirection.arrowDirectionEnLeft(),
-              fit: BoxFit.scaleDown,
+      child: Builder(builder: (context) {
+        return RefreshIndicator(
+          onRefresh: () async {
+            MyFavoriteCubit.get(context).getData();
+          },
+          child: Scaffold(
+            appBar: AppBar(
+              backgroundColor: ColorManager.primaryColor,
+              toolbarHeight: DeviceWidthHeight.perentageOfHeight(
+                HeightManager.h129,
+              ),
+              leading: InkWell(
+                onTap: () {
+                  RouteManager.backFrom();
+                },
+                child: SvgPicture.asset(
+                  ArrowDirection.arrowDirectionEnLeft(),
+                  fit: BoxFit.scaleDown,
+                ),
+              ),
+              centerTitle: true,
+              title: Text(
+                LanguageGlobaleVar.myFavorites.tr,
+                style: TextStyleManager.bold(
+                  size: TextSizeManager.s28,
+                  color: ColorManager.whiteColor,
+                ),
+              ),
+            ),
+            body: CustomWhiteBackground(
+              child: Padding(
+                padding: PaddingManager.paddingHorizontalBody,
+                child: BlocBuilder<MyFavoriteCubit, MyFavoriteState>(
+                  builder: (context, state) {
+                    if (state is MyFavoriteLaoding) {
+                      return Center(
+                        child: CustomCircleProgressIndicator(),
+                      );
+                    } else if (state is MyFavoriteFailing) {
+                      return Center(
+                        child: Text(
+                          state.errMessage,
+                          style: TextStyleManager.bold(
+                            size: TextSizeManager.s20,
+                            color: ColorManager.redColor,
+                          ),
+                        ),
+                      );
+                    } else if (state is MyFavoriteSuccess) {
+                      return Column(
+                        children: [
+                          SizedBox(
+                            height: HeightManager.h37,
+                          ),
+                          CustomListOfItems(
+                            data: state.favorites.data,
+                          )
+                        ],
+                      );
+                    } else {
+                      return SizedBox();
+                    }
+                  },
+                ),
+              ),
             ),
           ),
-          centerTitle: true,
-          title: Text(
-            LanguageGlobaleVar.myFavorites.tr,
-            style: TextStyleManager.bold(
-              size: TextSizeManager.s28,
-              color: ColorManager.whiteColor,
-            ),
-          ),
-        ),
-        body: CustomWhiteBackground(
-          child: Padding(
-            padding: PaddingManager.paddingHorizontalBody,
-            child: BlocBuilder<MyFavoriteCubit, MyFavoriteState>(
-              builder: (context, state) {
-                if (state is MyFavoriteLaoding) {
-                  return Center(
-                    child: CustomCircleProgressIndicator(),
-                  );
-                } else if (state is MyFavoriteFailing) {
-                  return Center(
-                    child: Text(
-                      state.errMessage,
-                      style: TextStyleManager.bold(
-                        size: TextSizeManager.s20,
-                        color: ColorManager.redColor,
-                      ),
-                    ),
-                  );
-                } else if (state is MyFavoriteSuccess) {
-                  return Column(
-                    children: [
-                      SizedBox(
-                        height: HeightManager.h37,
-                      ),
-                      CustomListOfItems(
-                        data: state.favorites.data,
-                      )
-                    ],
-                  );
-                } else {
-                  return SizedBox();
-                }
-              },
-            ),
-          ),
-        ),
-      ),
+        );
+      }),
     );
   }
 }

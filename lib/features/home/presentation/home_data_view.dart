@@ -65,20 +65,23 @@ class HomeDataView extends StatelessWidget {
             ),
             Expanded(
               child: CustomWhiteBackground(
-                child: Padding(
-                  padding: PaddingManager.paddingHorizontalBody,
-                  child: CustomScrollView(
-                    slivers: [
-                      SliverToBoxAdapter(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            SizedBox(height: HeightManager.h34),
-                            CustomBestSellerSection(),
-                            SizedBox(height: HeightManager.h20),
-                            CustomCarouselSlider(),
-                            SizedBox(height: HeightManager.h20),
-                            Column(
+                child: CustomScrollView(
+                  slivers: [
+                    SliverToBoxAdapter(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          SizedBox(height: HeightManager.h34),
+                          Padding(
+                            padding: PaddingManager.paddingHorizontalBody,
+                            child: CustomBestSellerSection(),
+                          ),
+                          SizedBox(height: HeightManager.h20),
+                          CustomCarouselSlider(),
+                          SizedBox(height: HeightManager.h20),
+                          Padding(
+                            padding: PaddingManager.paddingHorizontalBody,
+                            child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
@@ -90,15 +93,15 @@ class HomeDataView extends StatelessWidget {
                                 SizedBox(height: HeightManager.h5),
                               ],
                             ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                      RecommendedSections(),
-                      SliverToBoxAdapter(
-                        child: SizedBox(height: HeightManager.h20),
-                      ),
-                    ],
-                  ),
+                    ),
+                    RecommendedSections(),
+                    SliverToBoxAdapter(
+                      child: SizedBox(height: HeightManager.h20),
+                    ),
+                  ],
                 ),
               ),
             ),

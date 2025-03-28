@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:developer';
 
 import 'package:ecommerce_app/core/manager/carousal_cubit/carosal_state.dart';
 import 'package:ecommerce_app/features/home/data/model/slider_model.dart';
@@ -33,22 +32,22 @@ class CaroaslCubit extends Cubit<CarosalState> {
   PageController pageController = PageController();
   int currentIndex = 0;
   static Timer? _timer;
-  static void disposeTimer() {
-    _timer?.cancel();
-  }
 
   void onIndexChage(int index) {
     currentIndex = index;
     emit(CarosalChangeIndex());
   }
 
-  int getLenght() {
-    return data.length <= 5 ? data.length : 5;
+  int getCurrentIndex() {
+    if (pageController.hasClients) {
+      return (pageController.page?.round()) ?? 0;
+    } else {
+      return 0;
+    }
   }
 
-  void restart() {
-    emit(CarosalChangePage());
-    repeate();
+  int getLenght() {
+    return data.length <= 5 ? data.length : 5;
   }
 
   void repeate() {
@@ -60,6 +59,7 @@ class CaroaslCubit extends Cubit<CarosalState> {
       (t) {
         if (pageController.hasClients) {
           currentIndex = pageController.page?.toInt() ?? 0;
+          emit(CarosalChangePage());
         }
 
         if (currentIndex == (getLenght() - 1)) {

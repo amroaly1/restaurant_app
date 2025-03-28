@@ -28,7 +28,7 @@ class CustomListOfCost extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              listOfCost[index].title,
+              listOfCost[index],
               style: TextStyleManager.meduim(
                 size: TextSizeManager.s20,
               ),

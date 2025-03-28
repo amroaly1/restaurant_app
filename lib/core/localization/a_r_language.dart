@@ -69,5 +69,9 @@ class ARLanguage {
     LanguageGlobaleVar.completed: "كامل",
     LanguageGlobaleVar.cancelled: "ملغي",
     LanguageGlobaleVar.searchAbout: "ابحث عما تريد",
+    LanguageGlobaleVar.subtotal: "تكلفة المنتجات",
+    LanguageGlobaleVar.taxAndFees: "الضرائب والرسوم",
+    LanguageGlobaleVar.delivery: "التوصيل",
+    LanguageGlobaleVar.total: "المجموع",
   };
 }

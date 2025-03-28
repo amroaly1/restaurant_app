@@ -171,7 +171,8 @@ class MyConfirmOrdersView extends StatelessWidget {
                                     body: state.errMessage);
                               } else if (state is ConfirmOrderSuccess) {
                                 RouteManager.navigateToAndNoOptionToBack(
-                                    HomeView());
+                                  HomeView(),
+                                );
                               }
                             },
                             builder: (context, state) {

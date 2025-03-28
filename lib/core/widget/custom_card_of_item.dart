@@ -7,6 +7,7 @@ import 'package:ecommerce_app/core/utils/raduis_manager.dart';
 import 'package:ecommerce_app/core/utils/text_size_manager.dart';
 import 'package:ecommerce_app/core/utils/text_style_manager.dart';
 import 'package:ecommerce_app/features/home/data/model/product_model.dart';
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -27,9 +28,11 @@ class CustomCardOfItem extends StatelessWidget {
               RaduisManager.r35,
             ),
           ),
-          child: Image.network(
-            product.imagePath,
-            fit: BoxFit.fill,
+          child: FancyShimmerImage(
+            shimmerBaseColor: ColorManager.greyColor,
+            shimmerHighlightColor: ColorManager.secondaryColor,
+            boxFit: BoxFit.fill,
+            imageUrl: product.imagePath,
           ),
         ),
         SizedBox(height: HeightManager.h10),

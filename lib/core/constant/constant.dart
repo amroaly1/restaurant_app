@@ -1,5 +1,6 @@
+import 'package:ecommerce_app/core/localization/language_globale_var.dart';
 import 'package:ecommerce_app/core/utils/asset_icon_manager.dart';
-import 'package:ecommerce_app/features/card/data/model/cost_model.dart';
+import 'package:get/get.dart';
 
 const String yum = "YUM";
 const String quick = "QUICK";
@@ -16,9 +17,9 @@ const String ar = "AR";
 const String en = "EN";
 const String errorMessage = "Oops ! There is error ): ";
 
-List<CostModel> listOfCost = [
-  CostModel(title: "Subtotal", price: 32.00),
-  CostModel(title: "Tax and Fees", price: 5.00),
-  CostModel(title: "Delivery", price: 3.00),
-  CostModel(title: "Total", price: 40.00),
+List<String> listOfCost = [
+  LanguageGlobaleVar.subtotal.tr,
+  LanguageGlobaleVar.taxAndFees.tr,
+  LanguageGlobaleVar.delivery.tr,
+  LanguageGlobaleVar.total.tr,
 ];

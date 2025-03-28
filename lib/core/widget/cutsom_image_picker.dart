@@ -7,6 +7,7 @@ import 'package:ecommerce_app/core/utils/asset_icon_manager.dart';
 import 'package:ecommerce_app/core/utils/color_manager.dart';
 import 'package:ecommerce_app/core/utils/height_and_width_manager.dart';
 import 'package:ecommerce_app/core/utils/raduis_manager.dart';
+import 'package:fancy_shimmer_image/fancy_shimmer_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
@@ -46,9 +47,11 @@ class CutsomImagePicker extends StatelessWidget {
                           fit: BoxFit.cover,
                         );
                       } else if (state is ImagePickerGetFromStorage) {
-                        return Image.network(
-                          state.imageUrl,
-                          fit: BoxFit.cover,
+                        return FancyShimmerImage(
+                          shimmerBaseColor: ColorManager.greyColor,
+                          shimmerHighlightColor: ColorManager.secondaryColor,
+                          boxFit: BoxFit.cover,
+                          imageUrl: state.imageUrl,
                         );
                       }
                       return SvgPicture.asset(

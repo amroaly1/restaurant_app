@@ -135,8 +135,8 @@ class MenuViewLoading extends StatelessWidget {
                           ],
                         ),
                         Container(
-                          width: 52,
-                          height: 17,
+                          width: WidthManager.w52,
+                          height: HeightManager.h17,
                           color: ColorManager.whiteColor,
                         ),
                       ],
@@ -145,8 +145,8 @@ class MenuViewLoading extends StatelessWidget {
                       height: HeightManager.h10,
                     ),
                     Container(
-                      width: 127,
-                      height: 11,
+                      width: WidthManager.w127,
+                      height: HeightManager.h11,
                       color: ColorManager.whiteColor,
                     ),
                     Padding(

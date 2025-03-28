@@ -73,5 +73,9 @@ class ENLanguage {
     LanguageGlobaleVar.completed: "Completed",
     LanguageGlobaleVar.cancelled: "Cancelled",
     LanguageGlobaleVar.searchAbout: "search about what you want",
+    LanguageGlobaleVar.subtotal: "Subtotal",
+    LanguageGlobaleVar.taxAndFees: "Tax and Fees",
+    LanguageGlobaleVar.delivery: "Delivery",
+    LanguageGlobaleVar.total: "Total",
   };
 }
