@@ -1,6 +1,4 @@
 
-api_base_url.dart
-
 # Miscellaneous
 *.class
 *.log
@@ -35,6 +33,7 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+api_base_url.dart
 
 # Symbolication related
 app.*.symbols
