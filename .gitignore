@@ -1,3 +1,6 @@
+
+lib/core/network/api_base_url.dart
+
 # Miscellaneous
 *.class
 *.log
